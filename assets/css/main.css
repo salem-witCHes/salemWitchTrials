@@ -12,9 +12,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto Slab", sans-serif;
+  --heading-font: "Roboto Slab",  sans-serif;
+  --nav-font: "Roboto Slab",  sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -167,8 +167,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
+  max-height: 50px;
+  margin-right: 10px;
 }
 
 .header .logo h1 {
@@ -1079,6 +1079,95 @@ section,
   opacity: 1;
   bottom: 20px;
 }
+
+.csv-table {
+  display: none;
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.csv-table.active {
+  display: block;
+}
+
+.csv-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  z-index: 1;
+}
+
+.csv-table th, .csv-table td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: top;
+}
+
+.csv-table th {
+  background-color: #eee;
+}
+
+
+
+.map-wrapper {
+  padding: 0; 
+  box-sizing: border-box;
+  overflow-x: auto; /* horizontal scroll if zoomed */
+}
+
+.zoom-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 80vh; /* Viewport-relative height */
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  overflow: auto;
+  position: relative;
+  touch-action: none; /* For mobile drag */
+  cursor: grab;
+  background-color: white;
+  padding: 1rem; /* add consistent padding */
+  box-sizing: border-box
+}
+
+.zoom-img {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  transform-origin: center center;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  display: block;
+}
+
+.zoom-img:active {
+  transform: scale(1.5);
+  cursor: zoom-out;
+}
+
+/* Adjust layout for tablets */
+@media (max-width: 768px) {
+  .zoom-container {
+    height: 60vh;
+    padding: 1rem;
+  }
+}
+
+/* Adjust layout for phones */
+@media (max-width: 600px) {
+  .map-wrapper {
+    padding: 0.5rem;
+  }
+}
+
 
 
 /*--------------------------------------------------------------
