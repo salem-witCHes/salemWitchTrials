@@ -15,15 +15,23 @@
   --default-font: "Roboto Slab", sans-serif;
   --heading-font: "Roboto Slab",  sans-serif;
   --nav-font: "Roboto Slab",  sans-serif;
+  --sitename-font: "Beau Rivage", cursive;
 }
+
+.beau-rivage-regular {
+  font-family: "Beau Rivage", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #4A6B49; /* Background color for the entire website, including individual sections */
-  --default-color: #C8C8C8; /* Default color used for the majority of the text content across the entire website */
+  --background-color: #C7C7C7; /* Background color for the entire website, including individual sections */
+  --default-color: #1C1A28; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #635D8D; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --accent-color: #F58A07; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #628B48; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -31,10 +39,10 @@
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #4A6B49; /* Used as the background color for mobile navigation menu */
+  --nav-mobile-background-color: #C7C7C7; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #b4cbb3; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #0A090C; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #C8C8C8; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #000000; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -96,57 +104,6 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Global Header
@@ -172,16 +129,23 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 50px;
+  font-family: var(--sitename-font);
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
 }
 
+.header .logo h1>span {
+  color:#635D8D
+}
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
+/* .sitename {
+  font-family: var(--sitename-font);
+} */
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -879,66 +843,14 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# section-separator Section
 --------------------------------------------------------------*/
-.services .service-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
-  padding: 60px 30px;
-  transition: all ease-in-out 0.3s;
-  border-radius: 18px;
-  border-bottom: 5px solid var(--surface-color);
-  height: 100%;
-}
-
-.services .service-item .icon {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  margin: 0;
-  width: 64px;
-  height: 64px;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .service-item h3 {
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-@media (min-width: 1365px) {
-  .services .service-item:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent-color);
-  }
-
-  .services .service-item:hover h3 {
-    color: var(--accent-color);
-  }
-}
-
-/*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
-.stats {
+.section-separator {
   position: relative;
   padding: 120px 0;
 }
 
-.stats img {
+.section-separator img {
   position: absolute;
   inset: 0;
   display: block;
@@ -948,7 +860,7 @@ section,
   z-index: 1;
 }
 
-.stats:before {
+.section-separator:before {
   content: "";
   background: color-mix(in srgb, var(--background-color), transparent 40%);
   position: absolute;
@@ -956,24 +868,24 @@ section,
   z-index: 2;
 }
 
-.stats .container {
+.section-separator .container {
   position: relative;
   z-index: 3;
 }
 
-.stats .stats-item {
+.section-separator .section-separator-item {
   padding: 30px;
   width: 100%;
 }
 
-.stats .stats-item span {
+.section-separator .section-separator-item span {
   font-size: 48px;
   display: block;
   color: var(--default-color);
   font-weight: 700;
 }
 
-.stats .stats-item p {
+.section-separator .section-separator-item p {
   padding: 0;
   margin: 0;
   font-family: var(--heading-font);

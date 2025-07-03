@@ -5,17 +5,17 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Index - Salem WitCHes</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Final project for the DHDK course Information Science and Cultural Heritage (B1870)">
+  <meta name="keywords" content="Knowledge Organization, Salem witch trials">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,8 +43,8 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo_viola.png" alt="">
-        <h1 class="sitename">Salem WitCHes</h1>
+        <!-- <img src="assets/img/logo_viola.png" alt=""> -->
+        <h1 class="sitename">Salem Wit<span>CH</span>es</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -53,9 +53,9 @@
           <li><a href="#domain">Study of the domain</a></li>
           <li class="dropdown"><a href="#know-org"><span>Knowledge Organization</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#">Metadata analysis</a></li>
-              <li><a href="#">Theoretical model</a></li>
-              <li><a href="#">Conceptual model</a></li>
+              <li><a href="#metadata">Metadata analysis</a></li>
+              <li><a href="#theoretical">Theoretical model</a></li>
+              <li><a href="#conceptual">Conceptual model</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#know-repr"><span>Knowledge Representation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -112,7 +112,7 @@
     </section>
 
      <!-- Study of domain: selected items display and descritpion -->
-    <section id="domain" class="portfolio section">
+    <section class="portfolio section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Selected items</h2>
@@ -240,14 +240,16 @@
     </section> <!-- End Section Study of the domain -->
 
     <!-- Section separator -->
-    <section id="stats" class="stats section accent-background">
+    <section id="section-separator" class="section-separator section accent-background">
       <img src="assets/img/witchcraft_was_hung__in_history_p1.jpg" alt="" data-aos="fade-in">
-    </section><!-- /Stats Section -->
+    </section><!-- /section-separator Section -->
 
-    <!-- Knowledge Organization Section id="know-org" class="know-org section" -->
-    <section class="map-section">
 
-      <!-- Knowledge organization -->
+     <!-- Knowledge organization -->
+
+    <!-- Know-Org: Theoretical Model Section id="know-org" class="know-org section" -->
+    <section id="theoretical" class="map-section">
+
       <div class="container section-title" data-aos="fade-up">
         <h2>Theoretical model</h2>
         <p>Introduction to this section</p>
@@ -258,11 +260,11 @@
           <img class="zoom-img" src="assets/img/theoretical_map_prova.png" alt="Theoretical Model">
         </div>
 
-    </section><!-- /know-org Section -->
+    </section><!-- / Section -->
 
-    <section class="map-section">
+      <!-- Know-Org: Conceptual Model -->
+    <section id="conceptual" class="map-section">
 
-      <!-- Knowledge organization -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Conceptual model</h2>
         <p>Introduction to this section</p>
@@ -275,10 +277,12 @@
 
     </section>
 
+
     <!-- Section separator -->
-    <section id="stats" class="stats section accent-background">
+    <section id="section-separator" class="section-separator section accent-background">
       <img src="assets/img/witchcraft_was_hung__in_history_p1.jpg" alt="" data-aos="fade-in">
-    </section><!-- /Stats Section -->
+    </section><!-- /section-separator Section -->
+
 
     <!-- Know-repr: Items descriptions with csv -->
     <section id="csv" class="portfolio section">
@@ -434,6 +438,10 @@
 
     <!-- Know-repr: RDF dataset-->
 
+    <!-- Section separator -->
+    <section id="section-separator" class="section-separator section accent-background">
+      <img src="assets/img/witchcraft_was_hung__in_history_p1.jpg" alt="" data-aos="fade-in">
+    </section><!-- /section-separator Section -->
 
     <!-- Faq Section -->
     <section id="faq" class="faq section">
