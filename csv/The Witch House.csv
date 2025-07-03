@@ -1,9 +1,11 @@
 subject,predicate,object
 The Witch House,has title,The Witch House
-The Witch House,has creator,Jonathan Corwin
-The Witch House,has type,building
+The Witch House,has type,image
 The Witch House,is held by,Salem Public Library
-The Witch House,has format,architecture
-The Witch House,has place of production,Salem Massachusetts
-The Witch House,has date of production,between 1620 and 1692
-The Witch House,is subject of,Salem witch trials
+The Witch House,has format,jpeg
+The Witch House,has place of production,Salem 
+The Witch House,is part of,Salem Postcards
+The Witch House,has language,English
+The Witch House,has subject,Salem 
+The Witch House,has subject,Architecture 
+The Witch House,depicts,house

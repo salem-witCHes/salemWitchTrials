@@ -1,10 +1,14 @@
 subject,predicate,object
-Wonders of the Invisible World,has title,Wonders of the Invisible World
-Wonders of the Invisible World,has creator,Cotton Mather
-Wonders of the Invisible World,has type,book
-Wonders of the Invisible World,is held by,Boston Library
-Wonders of the Invisible World,has format,print
-Wonders of the Invisible World,has date of publication,1693
-Wonders of the Invisible World,has language,English
-Wonders of the Invisible World,is subject of,witchcraft
-Wonders of the Invisible World,is related to,William Stoughton
+The Wonders of the Invisible World,has title,The Wonders of the Invisible World
+The Wonders of the Invisible World,has author,Cotton Mather
+The Wonders of the Invisible World,has type,book
+The Wonders of the Invisible World,has date of publication,1693
+The Wonders of the Invisible World,has place of publication,Boston
+The Wonders of the Invisible World,has publisher,Benjamin Harris for Samuel Phillips
+The Wonders of the Invisible World,has provider,Library of Congress
+The Wonders of the Invisible World,is part of,John Davis Batchelder Collection (Rare Book Collection)
+The Wonders of the Invisible World,has format,print
+The Wonders of the Invisible World,has language,English
+The Wonders of the Invisible World,has subject,Witchcraft
+The Wonders of the Invisible World,has subject,Salem Witch Trials
+The Wonders of the Invisible World,is related to,William Stoughton
