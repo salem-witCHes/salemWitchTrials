@@ -1,10 +1,17 @@
 subject,predicate,object
-Court Warrant Document,has title,Warrant for the Execution of Bridget Bishop and Officer’s Return
-Court Warrant Document,has creator,Massachusetts Supreme Judicial Court
-Court Warrant Document,has type,court record
-Court Warrant Document,is held by,Peabody Essex Museum
-Court Warrant Document,has format,ink on paper
-Court Warrant Document,has date,1692-06
-Court Warrant Document,is subject of,Salem witch trials
-Court Warrant Document,is related to,Elizabeth Jackson Howe
-Court Warrant Document,is subject of,Bridget Bishop
+Court Warrant Document,has title,"Warrant for the execution of Bridget Bishop, and officer's return"
+Court Warrant Document,has creator,Massachusetts. Court of Oyer and Terminer (Essex County)
+Court Warrant Document,has contributor,William Stoughton
+Court Warrant Document,has type,trial report
+Court Warrant Document,has date of production,1692-06
+Court Warrant Document,has place of production,Massachusetts
+Court Warrant Document,is held by,Massachusetts Supreme Judicial Court Archives
+Court Warrant Document,has provider,"Philips Library, Peabody Essex Museum"
+Court Warrant Document,is part of,Massachusetts Court of Oyer and Terminer records (DEP 01)
+Court Warrant Document,has format,legal instrument
+Court Warrant Document,has dimensions,21.1 x 34.6 cm
+Court Warrant Document,has language,English
+Court Warrant Document,has subject,Salem witch trials
+Court Warrant Document,has subject,Bridget Bishop
+Court Warrant Document,has subject,Witchcraft
+Court Warrant Document,is depicted by,Execution of Bridget Bishop

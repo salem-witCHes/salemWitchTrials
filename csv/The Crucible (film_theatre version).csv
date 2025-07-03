@@ -1,10 +1,11 @@
 subject,predicate,object
-The Crucible,has title,The Crucible
-The Crucible,has creator,Arthur Miller
-The Crucible,has type,theater play
-The Crucible,has format,paper and ink
-The Crucible,has date of creation,1953
-The Crucible,has place of production,New York - USA
-The Crucible,is subject of,Salem witch trials
-The Crucible,is subject of,Elizabeth Howe
-The Crucible,is subject of,Mercy Lewis
+Playbill: The Crucible,has title,The Crucible
+Playbill: The Crucible,has author,Arthur Miller
+Playbill: The Crucible,has type,poster
+Playbill: The Crucible,has date of production,1953
+Playbill: The Crucible,has place of production,New York (USA)
+Playbill: The Crucible,is held by,National Museum of American History
+Playbill: The Crucible,has material,paper and ink
+Playbill: The Crucible,has measurement,9 in x 6 5/8 in
+Playbill: The Crucible,has subject,Salem witch trials
+Playbill: The Crucible,has subject,Theater
