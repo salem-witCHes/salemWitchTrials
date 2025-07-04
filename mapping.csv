@@ -1,0 +1,37 @@
+predicate,ontology_prefix,ontology_property
+has title,crm,P102_has_title
+has author,schema,author
+has creator,schema,creator
+has contributor,schema,contributor
+has publisher,dcterms,publisher
+has type,crm,P2_has_type
+has date of production,schema,dateCreated
+has date of publication,schema,datePublished
+has date of release,schema,startDate
+has place of publication,fabio,hasPlaceOfPublication
+has place of production,schema,locationCreated
+has production company,schema,productionCompany
+has content location,schema,contentLocation
+has location,crm,P55_has_current_location
+is held by,crm,P50_has_current_keeper
+has provider,dcterms,source
+is part of,schema,isPartOf
+has book format,schema,bookFormat
+has technique,crm,P32_used_general_technique
+has material,crm,P45_consists_of
+has language,crm,P72_has_language
+has number of pages,fabio,hasPageCount
+has number of seasons,schema,numberOfSeasons
+has dimension,crm,P43_has_dimension
+has measurement,schema,hasMeasurement
+has height,schema,height
+has width,schema,width
+has genre,schema,genre
+has actor,schema,actor
+has subject,schema,about 
+mentions,schema,mentions 
+is depicted by,crm,P62i_is_depicted_by
+depicts,crm,P62_depicts
+has donor,schema,acquiredFrom
+inspired by,crm,P15_was_influenced_by
+is related to,schema,relatedTo
