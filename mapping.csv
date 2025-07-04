@@ -29,7 +29,7 @@ has width,schema,width
 has genre,schema,genre
 has actor,schema,actor
 has subject,schema,about 
-mentions,schema,mentions 
+mentions,schema,mentions
 is depicted by,crm,P62i_is_depicted_by
 depicts,crm,P62_depicts
 has donor,schema,acquiredFrom

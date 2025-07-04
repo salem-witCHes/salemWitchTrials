@@ -7,22 +7,19 @@ from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, RDFS, XSD, DC
 
 # Namespaces 
-
-g = rdflib.Graph()
-
-EX = Namespace("http://example.org/item/")
+BASE = Namespace("https://w3id.org/salemWitchTrials/")
 CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 SCHEMA = Namespace("https://schema.org/")
-DCTERMS = Namespace("(http://purl.org/dc/terms/")
+DCTERMS = Namespace("http://purl.org/dc/terms/")
 FABIO = Namespace("http://purl.org/spar/fabio")
 FOAF = Namespace("http://xmlns.com/foaf/0.1/")
 
 namespaces = {
-    "crm": CRM,
-    "schema": SCHEMA,
-    "dcterms": DCTERMS,
-    "fabio": FABIO,
-    "foaf": FOAF
+    "crm": Namespace("http://www.cidoc-crm.org/cidoc-crm/"),
+    "schema": Namespace("https://schema.org/"),
+    "dcterms": Namespace("(http://purl.org/dc/terms/"),
+    "fabio": Namespace("http://purl.org/spar/fabio"),
+    "foaf": Namespace("http://xmlns.com/foaf/0.1/")
 }
 
 # Predicate mapping
@@ -33,20 +30,36 @@ with open("mapping.csv", encoding="utf-8") as f:
         nl_predicate = row["predicate"]
         prefix = row["ontology_prefix"]
         property = row["ontology_property"]
-        predicate_map[nl_predicate] = URIRef(namespaces[prefix][property])
+        predicate_map[nl_predicate.strip()] = URIRef(namespaces[prefix.strip()][property.strip()]) # strip() whitespace
 
 # pprint.pprint(predicate_map)
+
+# Entities mapping 
+mapping_entities = {}
+with open(path, encoding="utf-8") as f:
+    reader = csv.DictReader(f)
+
+
+# Initialize RDF graph
+g = rdflib.Graph()
+
+# List for our items
+csv_items = []
+csv_items_prefix = "item/"
 
 # Read CSVs in folder
 folder = "./csv_files"
 for file in os.listdir(folder):
     if file.endswith(".csv"):
         path = os.path.join(folder, file)
-        with open(path, encoding="utf-8") as csvfile:
+        with open(path, newline='', encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
-            subj = URIRef(EX[row["subject"].replace(" ", "_")])
-            pred = row["predicate"]
-            obj = row["object"]
+            for row in reader:
+                subj = URIRef(BASE[row["subject"].replace(" ", "_")])
+                pred = row["predicate"]
+                obj = row["object"]
+
+                csv_items.append(subj)
 
             # Replace natural language predicate with property
             if pred in predicate_map:
@@ -55,12 +68,31 @@ for file in os.listdir(folder):
                 print(f"Unknown predicate '{pred}'") # If predicate match is missing
                 predicate = RDFS.comment
 
-            # Check if object is URI or literal SISTEMA
-            obj_lit = Literal(obj)
+            # Check if object is entity or literal
+            if obj in csv_items:
+                # create URIRef from base for it
+                object = URIRef(BASE + csv_items_prefix + obj)
+            elif obj in mapping_entities:
+                entity = mapping_entities[row["obj"]]
+                if ":" not in entity:
+                    # Simply use the base URI to create the object
+                    obj = URIRef(BASE + entity)
+                else:
+                    # Else split namespace and entity
+                    namespace_str, entity_str = entity.split(":")
+                    namespace = namespaces[namespace_str]
+                    # Create object URI
+                    obj = URIRef(namespace + entity_str)
+            else:
+                # Otherwise create a Literal object
+                obj = Literal(obj)
 
+            # Add triple to the graph
             g.add((subj, predicate, obj_lit))
 
 for s,p,o in g.triples((None, None, None)):
     print(s,p,o)
 
+# Serialize the graph to Turtle format
 g.serialize(destination="first_try.ttl", format="ttl")
+
