@@ -1,36 +1,86 @@
-// JS for csv tables
+// // JS for csv tables
 document.addEventListener("DOMContentLoaded", function () {
-const filters = document.querySelectorAll("#tableFilters li");
-const tables = document.querySelectorAll(".csv-table");
+    const filters = document.querySelectorAll("#tableFilters li");
+    const tables = document.querySelectorAll(".csv-table");
 
-filters.forEach(filter => {
-    filter.addEventListener("click", function () {
-    const filterValue = this.getAttribute("data-filter");
+    // Function to switch tables
+    function showTable(filterElement) {
+        const filterValue = filterElement.getAttribute("data-filter");
 
-    // Update active class on buttons
-    filters.forEach(f => f.classList.remove("filter-active"));
-    this.classList.add("filter-active");
+        // Update active class on buttons
+        filters.forEach(f => f.classList.remove("filter-active"));
+        filterElement.classList.add("filter-active");
 
-    // Hide all tables first
-    tables.forEach(table => {
-        table.classList.remove("active");
+        // Hide all tables first
+        tables.forEach(table => table.classList.remove("active"));
+
+        // Show only the selected table
+        tables.forEach(table => {
+            if (table.classList.contains(filterValue.slice(1))) {
+                table.classList.add("active");
+            }
+        });
+    }
+
+    // Attach click event listeners
+    filters.forEach(filter => {
+        filter.addEventListener("click", function () {
+            showTable(this);
+        });
     });
 
-    // Show only the selected one
-    tables.forEach(table => {
-        if (table.classList.contains(filterValue.slice(1))) {
-        table.classList.add("active");
-        }
-    });
-    });
+    // Show the first table and activate the first filter by default
+    if (filters.length > 0) {
+        showTable(filters[0]);
+    }
 });
 
-// Show the first table by default
-tables.forEach(table => table.classList.remove("active"));
-const firstFilter = filters[0].getAttribute("data-filter").slice(1);
-const firstTable = document.querySelector(`.csv-table.${firstFilter}`);
-if (firstTable) firstTable.classList.add("active");
-});
+// Also mark the first filter as active
+filters.forEach(f => f.classList.remove("filter-active")); // Remove active from all buttons
+firstFilterElement.classList.add("filter-active'); // Add active to the first button
+
+
+  // document.addEventListener("DOMContentLoaded", function () {
+//   const filters = document.querySelectorAll("#tableFilters li");
+//   const tables = document.querySelectorAll(".csv-table");
+
+//   function showTable(filterValue) {
+//     // Remove active class from all buttons
+//     filters.forEach(f => f.classList.remove("filter-active"));
+
+//     // Add active to clicked filter
+//     const activeFilter = [...filters].find(f => f.getAttribute("data-filter") === filterValue);
+//     if (activeFilter) activeFilter.classList.add("filter-active");
+
+//     // Hide all tables
+//     tables.forEach(table => table.classList.remove("active"));
+
+//     // Show matching table
+//     const matchedTable = document.querySelector(`.csv-table${filterValue}`);
+//     if (matchedTable) matchedTable.classList.add("active");
+//   }
+
+//   // Set default table (first filter)
+//   const initialFilter = filters[0].getAttribute("data-filter"); // includes dot
+//   showTable(initialFilter);
+
+//   // Set up click events
+//   filters.forEach(filter => {
+//     filter.addEventListener("click", function () {
+//       const filterValue = this.getAttribute("data-filter");
+//       showTable(filterValue);
+//     });
+//   });
+// });
+
+// // Assuming you initialized Isotope like this:
+// var iso = new Isotope('.isotope-container', {
+//   itemSelector: '.isotope-item',
+//   layoutMode: 'fitRows' // or 'masonry'
+// });
+
+// // Trigger filter manually on page load
+// iso.arrange({ filter: '.filter-painting' });
 
 
 // JS for models
