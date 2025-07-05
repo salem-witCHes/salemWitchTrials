@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title type="main">A Short History of the Salem Village Witchcraft Trials</title>
+                <title type="sub">Illustrated by a Verbatim Report of the Trial of Mrs. Elizabeth Howe</title>
+                <author>Martin Van Burne Perley</author>
+                <respStmt>
+                    <resp>Encoded in TEI</resp>
+                    <name>Sara Roggiani</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>salem-witCHes edition</edition>
+                <respStmt>
+                    <resp>Annotations by</resp>
+                    <name>Sara Roggiani</name>
+                </respStmt>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>
+                    <name>salem-witCHes</name>
+                    <idno>https://github.com/salem-witCHes</idno>
+                </publisher>
+                <pubPlace>Bologna</pubPlace>
+                <date when="2025"/>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/">
+                        This is an open access work licensed under a Creative Commons Attribution 4.0 International license.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl xml:lang="en">
+                    <title type="main">A short history of the Salem village witchcraft trials</title>
+                    <title type="sub">Illustrated by a Verbatim Report of the Trial of Mrs. Elizabeth Howe</title>
+                    <author>Martin Van Burne Perley</author>
+                    <publisher>M. V. B. Perley, Publisher</publisher>
+                    <date when="1911"/>
+                    <idno>https://archive.org/details/shorthistoryofsa00perl/mode/1up</idno>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <listPerson>
+                    <person xml:id="EH" sameAs="https://viaf.org/viaf/53375579">
+                        <persName>Mrs. Elizabeth Howe</persName>
+                        <birth>
+                            <date when="1637-05-14">14 May, 1637</date>
+                            <placeName ref="#rowley-yorkshire">Rowley, Yorkshire</placeName>
+                        </birth>
+                        <death>
+                            <date when="1692-07-19">19 July, 1692</date>
+                            <placeName ref="#salem">Salem</placeName>
+                        </death>
+                        <note>
+                            <quote source="https://en.wikipedia.org/wiki/Elizabeth_Howe">
+                                Elizabeth Howe was one of the accused in the Salem witch trials. She was found guilty and executed on July 19, 1692.
+                            </quote>
+                        </note>
+                    </person>
+                    <person xml:id="SP" sameAs="http://viaf.org/viaf/57415136">
+                        <persName>Samuel Parris</persName>
+                        <birth>
+                            <date when="1653">1653</date>
+                            <placeName ref="#london">London</placeName>
+                        </birth>
+                        <death>
+                            <date when="1720-02-27">27 February 1720</date>
+                            <placeName ref="#sudbury-massachusetts">Sudbury, Massachusetts</placeName>
+                        </death>
+                        <note>
+                            <quote source="https://en.wikipedia.org/wiki/Samuel_Parris">
+                                Samuel Parris was a Puritan minister in the province of Massachussetts Bay. [...] he gained notoriety for being the minister of the church in Salem Village, Massachusetts during the Salem witch trials of 1692.
+                            </quote>
+                        </note>
+                    </person>
+                    <person xml:id="RC" sameAs="http://viaf.org/viaf/31422410">
+                        <persName>Roger Conant</persName>
+                        <birth>
+                            <date when="1592-04">April 1592</date>
+                            <placeName ref="#england">England</placeName>
+                        </birth>
+                        <death>
+                            <date when="1679-11-19">November 19, 1679</date>
+                            <placeName ref="#massachusetts">Massachusetts</placeName>
+                        </death>
+                        <note>
+                            <quote source="https://en.wikipedia.org/wiki/Roger_Conant_(colonist)">
+                                Roger Conant was a New England colonist and drysalter credited for establishing the communities of Salem, Peabody, Beverly and Danvers, Massachusetts (Peabody, Beverly and Danvers were part of Salem during his lifetime).
+                            </quote>
+                        </note>
+                    </person>
+                    <person xml:id="JE" sameAs="http://viaf.org/viaf/25995341">
+                        <persName>John Endecott</persName>
+                        <birth>
+                            <date>unknown</date>
+                            <placeName ref="#england">England</placeName>
+                        </birth>
+                        <death>
+                            <date when="1664/5-03-15">15 March 1664/5</date>
+                            <placeName ref="#boston">Boston</placeName>
+                        </death>
+                        <note>
+                            <quote source="https://en.wikipedia.org/wiki/John_Endecott">
+                              John Endecott, regarded as one of the Fathers of New England, was the longest-serving governor of the Massachusetts Bay Colony, which became the Commonwealth of Massachusetts.  
+                            </quote>
+                        </note>
+                    </person>
+                </listPerson>
+            </particDesc>
+            <settingDesc>
+                <listPlace>
+                    <place xml:id="salem" sameAs="http://viaf.org/viaf/234136066">
+                        <placeName>Salem</placeName>
+                    </place>
+                    <place xml:id="rowley-yorkshire" sameAs="https://www.wikidata.org/wiki/Q4626049">
+                        <placeName>Rowley, Yorkshire</placeName>
+                    </place>
+                    <place xml:id="sudbury-massachusetts" sameAs="https://www.wikidata.org/wiki/Q591591">
+                        <placeName>Sudbury, Massachusetts</placeName>
+                    </place>
+                    <place xml:id="london" sameAs="http://viaf.org/viaf/8676155769103627880004">
+                        <placeName>London</placeName>
+                    </place>
+                    <place xml:id="england" sameAs="http://viaf.org/viaf/127756949">
+                        <placeName>England</placeName>
+                    </place>
+                    <place xml:id="massachusetts" sameAs="http://viaf.org/viaf/130169058">
+                        <placeName>Massachusetts</placeName>
+                    </place>
+                    <place xml:id="boston" sameAs="http://viaf.org/viaf/319145857930123021471">
+                        <placeName>Boston</placeName>
+                    </place>
+                </listPlace>
+            </settingDesc>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <front type="frontispiece">
+            <titlePage>
+                <docTitle>
+                    <titlePart type="main">
+                        <p n="1">A short history</p>
+                        <p n="2">of the</p>
+                        <p n="3"><placeName ref="#salem">Salem Village</placeName> Witchcraft Trials</p>
+                    </titlePart>
+                    <titlePart type="sub">
+                        <p n="1">Illustrated by a</p>
+                        <p n="2">Verbatim Report of the Trial of</p>
+                        <p n="3"><persName ref="#EH">Mrs. Elizabeth Howe</persName></p>
+                    </titlePart>
+                    <titlePart type="desc">
+                        <p>A MEMORIAL OF HER</p>
+                    </titlePart>
+                </docTitle>
+                <figure>
+                    <graphic url="https://github.com/salem-witCHes/salemWitchTrials/blob/main/book%20images/image002%20-%20Modificata.png?raw=true"/>
+                </figure>
+                <epigraph>
+                    <cit>
+                        <quote>
+                            <l>To dance with</l>
+                            <l>Lapland witches, while the lab'ring moon eclipses at their</l>
+                            <l>charms.</l>
+                        </quote>
+                        <bibl>-Paradise Lost, ii. 662</bibl>
+                    </cit>
+                </epigraph>    
+                <note type="contents">Map and half tone illustrations</note>
+                <docImprint>
+                    <pubPlace><placeName ref="#salem">Salem, Mass.:</placeName></pubPlace>
+                    <publisher>M. V. B. Perley, Publisher</publisher>
+                    <docDate when="1911">1911</docDate>
+                </docImprint>
+            </titlePage>
+        </front>
+        <body>
+            <div type="page" n="1">
+                <pb facs="page3"/>
+                <titlePage>Notice</titlePage>
+                <p>
+                    Greater <placeName ref="#salem">Salem</placeName>, the province of Governors <persName ref="#RC">Conant</persName> and <persName ref="#JE">Endicott</persName>, is visited by thousands of sojourners yearly. They come to study the Quakers and the witches, to picture the manses of the latter and the stately mansions of <placeName ref="#salem">Salem</placeName>'s commercial kings, and breathe the salubrious air of "old gray ocean."
+                </p>
+                <p>
+                    The witchcraft "delusion" is generally the first topic of inquiry, and the earnest desire of those people with notebook in hand to aid the memory in chronicling answers, suggested this monograph and urged its publication. There is another cogent reason: the popular knowledge is circumscribed and even that needs correcting.
+                </p>
+                <p>
+                    This short history meets that earnest desire; it gives the origin, growth, and death of the hideous monster; it gives dates, courts, and names of places, jurors, witnesses, and those hanged; it names and explains certain "men and things" that are concomitant to the trials, with which the reader may not be conversant and which are necessary to the proper setting of the trials in one's mind; it compasses the salient features of witchcraft history, so that the story of the <date when="1692">1692</date> "delusion" may be garnered and entertainingly rehearsed.
+                </p>
+                <p>
+                    The trials were all spread upon the records, word for word. <persName ref="#SP">Rev. Samuel Parris</persName>, stenographer to the court, says they were "taken down in my characters written at the time," barring, of course,
+                </p>
+            </div>
+            <div type="page" n="2">
+                <pb facs="page4"> <!-- to clearly mark the page break -->
+                    <fw place="top" type="header" rend="center">THE WITCHCRAFT DELUSION</fw>        <!-- fw = forme work, contains a running head, catchword, or similar material appearing on the current page -->
+                    <fw place="top" type="pageNum" rend="left">4</fw>
+                </pb>
+                <p>
+                    the evidence by affidavits, which were written, signed, and attested, and filed in the Clerk of Court's office, where they may now be seen.
+                </p>
+                <p>
+                    Great research has hitherto been made, keen, sagacious acumen employed, and much written; but the true criterion of judgment, a trial, — a word for word trial, — has not before this been published. Here, then, is the first opportunity of readers to judge for themselves.
+                </p>
+                <p>
+                    The trials were unique. The court was without authority; none of the judges, it is said, was bred to the law; evidence was arbitrarily admitted or excluded; the accused were not allowed counsel in law or the consolation of the clergy in religion.
+                </p>
+                <p>
+                    The careful reader may discover, between the lines, in questions, in answers, and in the strange exhibitions, the real state of mind pervading all, which has been mildly characterized as a "delusion"; also he may be able to compare the Mosaic, the <date when="1692">1692</date>, and the modern spirit manifestations, and advantageously determine for himself what is worth while in modern spiritualism, mindreading, clairvoyance, mesmerism, and the rest.
+                </p>
+                <p>
+                    Though men of education, religion, titled dignity, and official station, of the professions and the elite, were responsible for the horrible catastrophy, and in one instance or more forced the yeoman jurors to convict (who at the end signed recantations and expressed their grief), — religion and education must not be undervalued; a religious education will yield the highest type of manhood.
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>
