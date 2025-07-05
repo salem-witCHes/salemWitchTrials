@@ -17,6 +17,7 @@ is held by,crm,P50_has_current_keeper
 has provider,dcterms,source
 is part of,schema,isPartOf
 has book format,schema,bookFormat
+has format,schema,encodingFormat
 has technique,crm,P32_used_general_technique
 has material,crm,P45_consists_of
 has language,crm,P72_has_language
@@ -29,7 +30,7 @@ has width,schema,width
 has genre,schema,genre
 has actor,schema,actor
 has subject,schema,about 
-mentions,schema,mentions 
+mentions,schema,mentions
 is depicted by,crm,P62i_is_depicted_by
 depicts,crm,P62_depicts
 has donor,schema,acquiredFrom
