@@ -18,12 +18,12 @@ Tompkins Harrison Matteson,wd:Q3531432
 painting,wd:Q3305213
 Peabody Essex Museum,wd:Q3373790
 oil on canvas,wd:Q115654970
-Mary Fisher,wd:Q6779537
+Mary Fisher,wd:Q16859689
 Joseph Boggs Beale,wd:Q52150099
 transparency,wd:Q487623
 George Eastman Museum,wd:Q1507284
 Alexander McQueen,wd:Q207939
-creative work,wd:Q386724
+creative work,schema:CreativeWork
 National Gallery of Victoria,wd:Q1464509
 Melbourne,wd:Q3141
 "In memory of Elizabeth Howe, Salem 1692 collection, autumn-winter 2007-2008",wd:Q133456206
@@ -51,7 +51,8 @@ Arthur Miller,wd:Q80596
 poster,wd:Q429785
 New York (USA),wd:Q1384
 National Museum of American History,wd:Q110453413
-paper and ink,wd:Q11472
+paper,wd:Q11472
+ink,wd:Q127418
 theatre,wd:Q17172848
 image,wd:Q478798
 Salem Public Library,wd:Q39069597

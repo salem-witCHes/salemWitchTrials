@@ -8,11 +8,6 @@ from rdflib.namespace import RDF, RDFS, XSD, DC
 
 # Namespaces 
 BASE = Namespace("https://w3id.org/salemWitchTrials/")
-CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
-SCHEMA = Namespace("https://schema.org/")
-DCTERMS = Namespace("http://purl.org/dc/terms/")
-FABIO = Namespace("http://purl.org/spar/fabio")
-FOAF = Namespace("http://xmlns.com/foaf/0.1/")
 
 namespaces = {
     "crm": Namespace("http://www.cidoc-crm.org/cidoc-crm/"),
@@ -24,7 +19,8 @@ namespaces = {
     "skos": Namespace("http://www.w3.org/2004/02/skos/core#"),
     "owl": Namespace("http://www.w3.org/2002/07/owl#"),
     "rdf": Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#"),
-    "viaf": Namespace("http://viaf.org/viaf/")
+    "viaf": Namespace("http://viaf.org/viaf/"),
+    "lode": Namespace("http://linkedevents.org/ontology/")
 }
 
 # Predicate mapping
@@ -51,6 +47,9 @@ with open("mapping_entities.csv", encoding="utf-8") as f:
 
 # Initialize RDF graph
 g = rdflib.Graph()
+for prefix, ns in namespaces.items():
+    g.bind(prefix, ns)
+
 
 # List for our items
 csv_items = []
@@ -64,9 +63,9 @@ for file in os.listdir(folder):
         with open(path, newline='', encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                subj = URIRef(BASE[row["subject"].replace(" ", "_")])
-                pred = row["predicate"]
-                obj = row["object"]
+                subj = URIRef(BASE[row["subject"].strip().replace(" ", "_")])
+                pred = row["predicate"].strip()
+                obj = row["object"].strip()
 
                 csv_items.append(subj)
 
@@ -103,5 +102,5 @@ for file in os.listdir(folder):
 #     print(s,p,o)
 
 # Serialize the graph to Turtle format
-g.serialize(destination="second_try.ttl", format="ttl")
+g.serialize(destination="second_try.ttl", format="ttl", base=BASE) 
 
