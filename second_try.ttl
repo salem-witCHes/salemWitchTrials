@@ -1,14 +1,14 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix ns2: <http://purl.org/spar/> .
+@prefix ns1: <http://purl.org/spar/> .
+@prefix ns2: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix schema: <https://schema.org/> .
 
-<https://w3id.org/salemWitchTrials/A_Short_History_of_the_Salem_Witchcraft_Trials> ns2:fabiohasPageCount "76" ;
-    ns2:fabiohasPlaceOfPublication <https://w3id.org/salemWitchTrials/place/salem> ;
-    ns1:P102_has_title "A Short History of the Salem Village Witchcraft Trials: : illustrated by a verbatim report of the trial of Mrs. Elizabeth Howe, a memorial of her" ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q571> ;
-    ns1:P50_has_current_keeper <https://www.wikidata.org/wiki/Q7603401> ;
-    ns1:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
+<https://w3id.org/salemWitchTrials/A_Short_History_of_the_Salem_Witchcraft_Trials> ns1:fabiohasPageCount "76" ;
+    ns1:fabiohasPlaceOfPublication <https://w3id.org/salemWitchTrials/place/salem> ;
+    ns2:P102_has_title "A Short History of the Salem Village Witchcraft Trials: : illustrated by a verbatim report of the trial of Mrs. Elizabeth Howe, a memorial of her" ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q571> ;
+    ns2:P50_has_current_keeper <https://www.wikidata.org/wiki/Q7603401> ;
+    ns2:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
     schema:about <https://w3id.org/salemWitchTrials/concept/witchcraft>,
         <https://w3id.org/salemWitchTrials/event/salem_witch_trials> ;
     schema:author <http://viaf.org/viaf/94991968> ;
@@ -20,12 +20,12 @@
         <https://www.wikidata.org/wiki/Q380719> .
 
 <https://w3id.org/salemWitchTrials/Court_Warrant_Document> dcterms:source <https://www.wikidata.org/wiki/Q7185913> ;
-    ns1:P102_has_title "Warrant for the execution of Bridget Bishop, and officer's return" ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q2334719> ;
-    ns1:P43_has_dimension "21.1 x 34.6 cm" ;
-    ns1:P50_has_current_keeper <https://www.wikidata.org/wiki/Q2002625> ;
-    ns1:P62i_is_depicted_by "Execution of Bridget Bishop" ;
-    ns1:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
+    ns2:P102_has_title "Warrant for the execution of Bridget Bishop, and officer's return" ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q2334719> ;
+    ns2:P43_has_dimension "21.1 x 34.6 cm" ;
+    ns2:P50_has_current_keeper <https://www.wikidata.org/wiki/Q2002625> ;
+    ns2:P62i_is_depicted_by "Execution of Bridget Bishop" ;
+    ns2:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
     schema:about <https://w3id.org/salemWitchTrials/concept/witchcraft>,
         <https://w3id.org/salemWitchTrials/event/salem_witch_trials>,
         <https://w3id.org/salemWitchTrials/person/bridget_bishop> ;
@@ -35,37 +35,37 @@
     schema:isPartOf "Massachusetts Court of Oyer and Terminer records (DEP 01)" ;
     schema:locationCreated <https://www.wikidata.org/wiki/Q771> .
 
-<https://w3id.org/salemWitchTrials/Examination_of_a_Witch_painting> ns1:P102_has_title "Examination of a Witch" ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q3305213> ;
-    ns1:P32_used_general_technique <https://www.wikidata.org/wiki/Q115654970> ;
-    ns1:P50_has_current_keeper <https://www.wikidata.org/wiki/Q3373790> ;
-    ns1:P55_has_current_location <https://w3id.org/salemWitchTrials/place/salem> ;
-    ns1:P62_depicts <https://w3id.org/salemWitchTrials/event/salem_witch_trials>,
+<https://w3id.org/salemWitchTrials/Examination_of_a_Witch_painting> ns2:P102_has_title "Examination of a Witch" ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q3305213> ;
+    ns2:P32_used_general_technique <https://www.wikidata.org/wiki/Q115654970> ;
+    ns2:P50_has_current_keeper <https://www.wikidata.org/wiki/Q3373790> ;
+    ns2:P55_has_current_location <https://w3id.org/salemWitchTrials/place/salem> ;
+    ns2:P62_depicts <https://w3id.org/salemWitchTrials/event/salem_witch_trials>,
         <https://www.wikidata.org/wiki/Q6779537> ;
     schema:author <https://www.wikidata.org/wiki/Q3531432> ;
     schema:dateCreated "1853" ;
     schema:height "38 1/2 inches" ;
     schema:width "54 inches" .
 
-<https://w3id.org/salemWitchTrials/Execution_of_Bridget_Bishop> ns1:P102_has_title "Execution of Bridget Bishop at Salem, 1692" ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q487623> ;
-    ns1:P43_has_dimension "8.3 × 10.2 cm" ;
-    ns1:P50_has_current_keeper <https://www.wikidata.org/wiki/Q1507284> ;
+<https://w3id.org/salemWitchTrials/Execution_of_Bridget_Bishop> ns2:P102_has_title "Execution of Bridget Bishop at Salem, 1692" ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q487623> ;
+    ns2:P43_has_dimension "8.3 × 10.2 cm" ;
+    ns2:P50_has_current_keeper <https://www.wikidata.org/wiki/Q1507284> ;
     schema:about <https://w3id.org/salemWitchTrials/event/salem_witch_trials>,
         <https://w3id.org/salemWitchTrials/person/bridget_bishop> ;
     schema:author <https://www.wikidata.org/wiki/Q52150099> ;
     schema:dateCreated "c. 1885" ;
     schema:isPartOf "American History: 1607-92" .
 
-<https://w3id.org/salemWitchTrials/Look_45_dress> ns1:P102_has_title "Look 45, dress" ;
-    ns1:P15_was_influenced_by <https://w3id.org/salemWitchTrials/person/elizabeth_howe> ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q386724> ;
-    ns1:P45_consists_of <https://www.wikidata.org/wiki/Q182045>,
+<https://w3id.org/salemWitchTrials/Look_45_dress> ns2:P102_has_title "Look 45, dress" ;
+    ns2:P15_was_influenced_by <https://w3id.org/salemWitchTrials/person/elizabeth_howe> ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q386724> ;
+    ns2:P45_consists_of <https://www.wikidata.org/wiki/Q182045>,
         <https://www.wikidata.org/wiki/Q37681>,
         <https://www.wikidata.org/wiki/Q910194>,
         "plastic " ;
-    ns1:P50_has_current_keeper <https://www.wikidata.org/wiki/Q1464509> ;
-    ns1:P55_has_current_location <https://www.wikidata.org/wiki/Q3141> ;
+    ns2:P50_has_current_keeper <https://www.wikidata.org/wiki/Q1464509> ;
+    ns2:P55_has_current_location <https://www.wikidata.org/wiki/Q3141> ;
     schema:about <https://w3id.org/salemWitchTrials/event/salem_witch_trials> ;
     schema:acquiredFrom <http://viaf.org/viaf/25157279880703301940> ;
     schema:creator <https://www.wikidata.org/wiki/Q207939> ;
@@ -74,21 +74,21 @@
     schema:isPartOf <https://www.wikidata.org/wiki/Q133456206> ;
     schema:locationCreated <https://www.wikidata.org/wiki/Q38> .
 
-<https://w3id.org/salemWitchTrials/Map_of_Salem_Village> ns1:P102_has_title "Map of Salem Village 1692" ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q4006> ;
-    ns1:P43_has_dimension "11 x 17 cm" ;
-    ns1:P50_has_current_keeper <https://www.wikidata.org/wiki/Q894583> ;
-    ns1:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
+<https://w3id.org/salemWitchTrials/Map_of_Salem_Village> ns2:P102_has_title "Map of Salem Village 1692" ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q4006> ;
+    ns2:P43_has_dimension "11 x 17 cm" ;
+    ns2:P50_has_current_keeper <https://www.wikidata.org/wiki/Q894583> ;
+    ns2:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
     schema:contentLocation <https://w3id.org/salemWitchTrials/place/salem> ;
     schema:creator <https://www.wikidata.org/wiki/Q134708539> ;
     schema:dateCreated "1866" ;
     schema:encodingFormat <https://www.wikidata.org/wiki/Q129613939> ;
     schema:isPartOf <https://www.wikidata.org/wiki/Q7051939> .
 
-<https://w3id.org/salemWitchTrials/Playbill:_The_Crucible> ns1:P102_has_title <https://www.wikidata.org/wiki/Q1183443> ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q429785> ;
-    ns1:P45_consists_of <https://www.wikidata.org/wiki/Q11472> ;
-    ns1:P50_has_current_keeper <https://www.wikidata.org/wiki/Q110453413> ;
+<https://w3id.org/salemWitchTrials/Playbill:_The_Crucible> ns2:P102_has_title <https://www.wikidata.org/wiki/Q1183443> ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q429785> ;
+    ns2:P45_consists_of <https://www.wikidata.org/wiki/Q11472> ;
+    ns2:P50_has_current_keeper <https://www.wikidata.org/wiki/Q110453413> ;
     schema:about <https://w3id.org/salemWitchTrials/event/salem_witch_trials>,
         "Theater" ;
     schema:author <https://www.wikidata.org/wiki/Q80596> ;
@@ -97,9 +97,9 @@
     schema:locationCreated <https://www.wikidata.org/wiki/Q1384> .
 
 <https://w3id.org/salemWitchTrials/Salem_TV_Series> dcterms:source <https://www.wikidata.org/wiki/Q37312> ;
-    ns1:P102_has_title <https://w3id.org/salemWitchTrials/place/salem> ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q5398426> ;
-    ns1:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
+    ns2:P102_has_title <https://w3id.org/salemWitchTrials/place/salem> ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q5398426> ;
+    ns2:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
     schema:about <https://w3id.org/salemWitchTrials/event/salem_witch_trials> ;
     schema:actor <https://www.wikidata.org/wiki/Q958227> ;
     schema:author <https://www.wikidata.org/wiki/Q4679789>,
@@ -111,23 +111,23 @@
     schema:productionCompany <https://www.wikidata.org/wiki/Q8962119> ;
     schema:startDate "2014-04-20" .
 
-<https://w3id.org/salemWitchTrials/The_Witch_House> ns1:P102_has_title "The Witch House" ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q478798> ;
-    ns1:P50_has_current_keeper <https://www.wikidata.org/wiki/Q39069597> ;
-    ns1:P62_depicts <https://www.wikidata.org/wiki/Q3947> ;
-    ns1:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
-    schema:about "Architecture ",
-        "Salem " ;
+<https://w3id.org/salemWitchTrials/The_Witch_House> ns2:P102_has_title "The Witch House" ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q478798> ;
+    ns2:P50_has_current_keeper <https://www.wikidata.org/wiki/Q39069597> ;
+    ns2:P62_depicts <https://www.wikidata.org/wiki/Q3947> ;
+    ns2:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
+    schema:about <https://w3id.org/salemWitchTrials/place/salem>,
+        "Architecture " ;
     schema:encodingFormat <https://www.wikidata.org/wiki/Q2195> ;
     schema:isPartOf "Salem Postcards" ;
     schema:locationCreated "Salem " .
 
 <https://w3id.org/salemWitchTrials/The_Wonders_of_the_Invisible_World> dcterms:publisher "Benjamin Harris for Samuel Phillips" ;
     dcterms:source <https://www.wikidata.org/wiki/Q131454> ;
-    ns2:fabiohasPlaceOfPublication <https://www.wikidata.org/wiki/Q100> ;
-    ns1:P102_has_title "The Wonders of the Invisible World" ;
-    ns1:P2_has_type <https://www.wikidata.org/wiki/Q571> ;
-    ns1:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
+    ns1:fabiohasPlaceOfPublication <https://www.wikidata.org/wiki/Q100> ;
+    ns2:P102_has_title "The Wonders of the Invisible World" ;
+    ns2:P2_has_type <https://www.wikidata.org/wiki/Q571> ;
+    ns2:P72_has_language <https://www.wikidata.org/wiki/Q1860> ;
     schema:about <https://w3id.org/salemWitchTrials/concept/witchcraft>,
         <https://w3id.org/salemWitchTrials/event/salem_witch_trials> ;
     schema:author <https://www.wikidata.org/wiki/Q380719> ;
