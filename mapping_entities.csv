@@ -1,12 +1,12 @@
 object,entity
 Martin Van Buren Perley,viaf:94991968
 book,wd:Q571
-Salem,https://w3id.org/salemWitchTrials/place/salem
+Salem,place/salem
 State Library of Massachusetts,wd:Q7603401
 print,wd:Q11060274
 English,wd:Q1860
-Bridget Bishop,https://w3id.org/salemWitchTrials/person/bridget_bishop
-Elizabeth Jackson Howe, https://w3id.org/salemWitchTrials/person/elizabeth_howe
+Bridget Bishop,person/bridget_bishop
+Elizabeth Jackson Howe,person/elizabeth_howe
 William Stoughton,wd:Q3568979
 Cotton Mather,wd:Q380719
 Massachusetts. Court of Oyer and Terminer (Essex County),wd:Q7116266
@@ -62,5 +62,5 @@ Boston,wd:Q100
 Benjamin Harris,wd:Q4888774
 Library of Congress,wd:Q131454
 John Davis Batchelder Collection (Rare Book Collection),wd:Q132754052
-Witchcraft,https://w3id.org/salemWitchTrials/concept/witchcraft
-Salem Witch Trials,https://w3id.org/salemWitchTrials/event/salem_witch_trials
+Witchcraft,concept/witchcraft
+Salem Witch Trials,event/salem_witch_trials
