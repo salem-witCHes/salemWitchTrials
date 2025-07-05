@@ -1,0 +1,53 @@
+@base <https://w3id.org/salemWitchTrials>.
+@prefix schema: <https://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix wiki: <https://www.wikidata.org/wiki/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<person/elizabeth_howe> a foaf:Person ;
+    foaf:name "Elizabeth Jackson Howe"@en ;
+    owl:sameAs viaf:53375579 , wiki:Q15452871 ;
+    schema:birthDate "1637-05-14"^^xsd:date ;
+    schema:deathDate "1692-07-19"^^xsd:date ;
+    dct:description "Elizabeth Howe was one of the accused in the Salem witch trials. She was found guilty and executed on July 19, 1692."@en .
+
+<person/bridget_bishop> a foaf:Person ;
+    foaf:name "Bridget Bishop" ;
+    owl:sameAs wiki:Q3644584 ;
+    schema:birthDate "1632-01-01"^^xsd:date ; #approximate
+    schema:deathDate "1692-06-10"^^xsd:date ;
+    dct:description "woman executed for witchcraft during Salem witch trials"@en .
+
+<place/salem> a schema:Place ;
+    schema:name "Salem" ;
+    owl:sameAs viaf:234136066 , wiki:Q54140;
+    schema:Event <https://w3id.org/salemWitchTrials/event/salem_witch_trials> ;
+    dct:description "city in Massachusetts, United States"@en .
+
+<concept/witchcraft> a skos:Concept ;
+    skos:prefLabel "Witchcraft"@en ;
+    owl:sameAs wiki:Q259745 ;
+    dct:description "belief in possibility of or attempts to trigger supernatural processes not possible per natural laws; alleged or fictional practice of magical skills and abilities"@en .
+
+
+<event/salem_witch_trials> a schema:Event ;
+    schema:name "Salem Witch Trials"@en ;
+    owl:sameAs wiki:Q219698 ;
+    schema:about <https://w3id.org/salemWitchTrials/concept/witchcraft> ;
+    schema:startDate "1692-02"^^xsd:gYearMonth ;
+    schema:endDate "1693-05"^^xsd:gYearMonth ;
+    dct:description "series of hearings and prosecutions of people accused of witchcraft in colonial Massachusetts"@en .
+    
+
+
+
+
+
+
+
+
