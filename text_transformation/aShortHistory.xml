@@ -100,7 +100,7 @@
                             <placeName ref="#england">England</placeName>
                         </birth>
                         <death>
-                            <date when="1664/5-03-15">15 March 1664/5</date>
+                            <date when="1665-03-15">15 March 1665</date>
                             <placeName ref="#boston">Boston</placeName>
                         </death>
                         <note>
@@ -136,6 +136,18 @@
                     </place>
                 </listPlace>
             </settingDesc>
+            <listEvent>
+                <event xml:id="salem-witch-trial" sameAs="https://www.wikidata.org/wiki/Q219698" from="1692" to="1693" type="main">
+                    <eventName>Salem Witch Trials</eventName>
+                    <persName ref="#SP">Samuel Parris</persName>
+                    <placeName ref="#salem">Salem</placeName>
+                    <desc>series of hearings and prosecutions of people accused of witchcraft in colonial Massachusetts</desc>
+                    <event xml:id="trial-of-EH" when="1692" type="sub">
+                        <eventName>Trial of Elizabeth Howe</eventName>
+                        <persName ref="#EH">Elizabeth Howe</persName>
+                    </event>
+                </event>
+            </listEvent>
         </profileDesc>
     </teiHeader>
     <text>
@@ -145,7 +157,7 @@
                     <titlePart type="main">
                         <p n="1">A short history</p>
                         <p n="2">of the</p>
-                        <p n="3"><placeName ref="#salem">Salem Village</placeName> Witchcraft Trials</p>
+                        <p n="3"><event ref="#salem-witch-trial">Salem Village Witchcraft Trials</event></p>
                     </titlePart>
                     <titlePart type="sub">
                         <p n="1">Illustrated by a</p>
@@ -181,16 +193,16 @@
             <div type="page" n="1">
                 <pb facs="page3"/>
                 <titlePage>Notice</titlePage>
-                <p>
-                    Greater <placeName ref="#salem">Salem</placeName>, the province of Governors <persName ref="#RC">Conant</persName> and <persName ref="#JE">Endicott</persName>, is visited by thousands of sojourners yearly. They come to study the Quakers and the witches, to picture the manses of the latter and the stately mansions of <placeName ref="#salem">Salem</placeName>'s commercial kings, and breathe the salubrious air of "old gray ocean."
+                <p n="1">
+                    <placeName ref="#salem">Greater Salem</placeName>, the province of Governors <persName ref="#RC">Conant</persName> and <persName ref="#JE">Endicott</persName>, is visited by thousands of sojourners yearly. They come to study the Quakers and the witches, to picture the manses of the latter and the stately mansions of <placeName ref="#salem">Salem</placeName>'s commercial kings, and breathe the salubrious air of "old gray ocean."
                 </p>
-                <p>
+                <p n="2">
                     The witchcraft "delusion" is generally the first topic of inquiry, and the earnest desire of those people with notebook in hand to aid the memory in chronicling answers, suggested this monograph and urged its publication. There is another cogent reason: the popular knowledge is circumscribed and even that needs correcting.
                 </p>
-                <p>
+                <p n="3">
                     This short history meets that earnest desire; it gives the origin, growth, and death of the hideous monster; it gives dates, courts, and names of places, jurors, witnesses, and those hanged; it names and explains certain "men and things" that are concomitant to the trials, with which the reader may not be conversant and which are necessary to the proper setting of the trials in one's mind; it compasses the salient features of witchcraft history, so that the story of the <date when="1692">1692</date> "delusion" may be garnered and entertainingly rehearsed.
                 </p>
-                <p>
+                <p n="4">
                     The trials were all spread upon the records, word for word. <persName ref="#SP">Rev. Samuel Parris</persName>, stenographer to the court, says they were "taken down in my characters written at the time," barring, of course,
                 </p>
             </div>
@@ -199,19 +211,19 @@
                     <fw place="top" type="header" rend="center">THE WITCHCRAFT DELUSION</fw>        <!-- fw = forme work, contains a running head, catchword, or similar material appearing on the current page -->
                     <fw place="top" type="pageNum" rend="left">4</fw>
                 </pb>
-                <p>
+                <p n="1">
                     the evidence by affidavits, which were written, signed, and attested, and filed in the Clerk of Court's office, where they may now be seen.
                 </p>
-                <p>
+                <p n="2">
                     Great research has hitherto been made, keen, sagacious acumen employed, and much written; but the true criterion of judgment, a trial, — a word for word trial, — has not before this been published. Here, then, is the first opportunity of readers to judge for themselves.
                 </p>
-                <p>
+                <p n="3">
                     The trials were unique. The court was without authority; none of the judges, it is said, was bred to the law; evidence was arbitrarily admitted or excluded; the accused were not allowed counsel in law or the consolation of the clergy in religion.
                 </p>
-                <p>
+                <p n="4">
                     The careful reader may discover, between the lines, in questions, in answers, and in the strange exhibitions, the real state of mind pervading all, which has been mildly characterized as a "delusion"; also he may be able to compare the Mosaic, the <date when="1692">1692</date>, and the modern spirit manifestations, and advantageously determine for himself what is worth while in modern spiritualism, mindreading, clairvoyance, mesmerism, and the rest.
                 </p>
-                <p>
+                <p n="5">
                     Though men of education, religion, titled dignity, and official station, of the professions and the elite, were responsible for the horrible catastrophy, and in one instance or more forced the yeoman jurors to convict (who at the end signed recantations and expressed their grief), — religion and education must not be undervalued; a religious education will yield the highest type of manhood.
                 </p>
             </div>

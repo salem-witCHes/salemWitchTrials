@@ -1,0 +1,107 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lode: <http://linkedevents.org/ontology/> .
+@prefix my_ns: <https://w3id.org/salemWitchTrials/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+my_ns:A_Short_History a schema:CreativeWork ;
+    schema:archivedAt <https://archive.org/details/shorthistoryofsa00perl/mode/1up> ;
+    schema:author my_ns:Author ;
+    schema:datePublished "1911"^^xsd:gYear ;
+    schema:description """
+                    This short history meets that earnest desire; it gives the origin, growth, and death of the hideous monster; it gives dates, courts, and names of places, jurors, witnesses, and those hanged; it names and explains certain "men and things" that are concomitant to the trials, with which the reader may not be conversant and which are necessary to the proper setting of the trials in one's mind; it compasses the salient features of witchcraft history, so that the story of the 1692 "delusion" may be garnered and entertainingly rehearsed.
+                """ ;
+    schema:name "A short history of the Salem village witchcraft trialsIllustrated by a Verbatim Report of the Trial of Mrs. Elizabeth Howe" ;
+    schema:publisher my_ns:Publisher .
+
+<https://w3id.org/salemWitchTrials/event/salem_witch_trials> a lode:Event ;
+    lode:atPlace "Salem" ;
+    lode:involvedAgent "Samuel Parris" ;
+    schema:description """
+                    The trials were unique. The court was without authority; none of the judges, it is said, was bred to the law; evidence was arbitrarily admitted or excluded; the accused were not allowed counsel in law or the consolation of the clergy in religion.
+                """ ;
+    schema:endDate "1693" ;
+    schema:name "Salem Witch Trials" ;
+    schema:startDate "1692" .
+
+<https://w3id.org/salemWitchTrials/event/trial_of_EH> a lode:Event ;
+    lode:atTime "1692" ;
+    lode:involvedAgent "Elizabeth Howe" ;
+    schema:name "Trial of Elizabeth Howe" .
+
+<https://w3id.org/salemWitchTrials/person/EH> a foaf:Person ;
+    rdfs:comment "Elizabeth Howe was one of the accused in the Salem witch trials. She was found guilty and executed on July 19, 1692." ;
+    owl:sameAs <https://viaf.org/viaf/53375579> ;
+    foaf:name "Mrs. Elizabeth Howe" ;
+    schema:birthDate "1637-05-14" ;
+    schema:birthPlace <https://w3id.org/salemWitchTrials/place/rowley-yorkshire> ;
+    schema:citation <https://en.wikipedia.org/wiki/Elizabeth_Howe> ;
+    schema:deathDate "1692-07-19"^^xsd:date ;
+    schema:deathPlace <https://w3id.org/salemWitchTrials/place/salem> .
+
+<https://w3id.org/salemWitchTrials/person/JE> a foaf:Person ;
+    rdfs:comment "John Endecott, regarded as one of the Fathers of New England, was the longest-serving governor of the Massachusetts Bay Colony, which became the Commonwealth of Massachusetts." ;
+    owl:sameAs <http://viaf.org/viaf/25995341> ;
+    foaf:name "John Endecott" ;
+    schema:birthDate "unknown" ;
+    schema:birthPlace <https://w3id.org/salemWitchTrials/place/england> ;
+    schema:citation <https://en.wikipedia.org/wiki/John_Endecott> ;
+    schema:deathDate "1665-03-15"^^xsd:date ;
+    schema:deathPlace <https://w3id.org/salemWitchTrials/place/boston> .
+
+<https://w3id.org/salemWitchTrials/person/RC> a foaf:Person ;
+    rdfs:comment "Roger Conant was a New England colonist and drysalter credited for establishing the communities of Salem, Peabody, Beverly and Danvers, Massachusetts (Peabody, Beverly and Danvers were part of Salem during his lifetime)." ;
+    owl:sameAs <http://viaf.org/viaf/31422410> ;
+    foaf:name "Roger Conant" ;
+    schema:birthDate "1592-04" ;
+    schema:birthPlace <https://w3id.org/salemWitchTrials/place/england> ;
+    schema:citation <https://en.wikipedia.org/wiki/Roger_Conant_(colonist)> ;
+    schema:deathDate "1679-11-19"^^xsd:date ;
+    schema:deathPlace <https://w3id.org/salemWitchTrials/place/massachusetts> .
+
+<https://w3id.org/salemWitchTrials/person/SP> a foaf:Person ;
+    rdfs:comment "Samuel Parris was a Puritan minister in the province of Massachussetts Bay. [...] he gained notoriety for being the minister of the church in Salem Village, Massachusetts during the Salem witch trials of 1692." ;
+    owl:sameAs <http://viaf.org/viaf/57415136> ;
+    foaf:name "Samuel Parris" ;
+    schema:birthDate "1653" ;
+    schema:birthPlace <https://w3id.org/salemWitchTrials/place/london> ;
+    schema:citation <https://en.wikipedia.org/wiki/Samuel_Parris> ;
+    schema:deathDate "1720-02-27"^^xsd:date ;
+    schema:deathPlace <https://w3id.org/salemWitchTrials/place/sudbury-massachusetts> .
+
+my_ns:Author a foaf:Person ;
+    foaf:name "Martin Van Burne Perley" .
+
+my_ns:Publisher a foaf:Agent ;
+    foaf:name "M. V. B. Perley, Publisher" .
+
+<https://w3id.org/salemWitchTrials/place/boston> a schema:Place ;
+    owl:sameAs <http://viaf.org/viaf/319145857930123021471> ;
+    schema:name "Boston" .
+
+<https://w3id.org/salemWitchTrials/place/london> a schema:Place ;
+    owl:sameAs <http://viaf.org/viaf/8676155769103627880004> ;
+    schema:name "London" .
+
+<https://w3id.org/salemWitchTrials/place/massachusetts> a schema:Place ;
+    owl:sameAs <http://viaf.org/viaf/130169058> ;
+    schema:name "Massachusetts" .
+
+<https://w3id.org/salemWitchTrials/place/rowley-yorkshire> a schema:Place ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q4626049> ;
+    schema:name "Rowley, Yorkshire" .
+
+<https://w3id.org/salemWitchTrials/place/salem> a schema:Place ;
+    owl:sameAs <http://viaf.org/viaf/234136066> ;
+    schema:name "Salem" .
+
+<https://w3id.org/salemWitchTrials/place/sudbury-massachusetts> a schema:Place ;
+    owl:sameAs <https://www.wikidata.org/wiki/Q591591> ;
+    schema:name "Sudbury, Massachusetts" .
+
+<https://w3id.org/salemWitchTrials/place/england> a schema:Place ;
+    owl:sameAs <http://viaf.org/viaf/127756949> ;
+    schema:name "England" .
+

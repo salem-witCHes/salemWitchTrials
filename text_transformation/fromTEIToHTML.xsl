@@ -58,7 +58,7 @@
                 <hr/>
             </div>
 
-            <!-- publication Info -->
+            <!-- publication info -->
             <xsl:apply-templates select="tei:docImprint"/>
         </div>
     </xsl:template>
