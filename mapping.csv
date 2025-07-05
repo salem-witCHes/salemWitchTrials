@@ -13,11 +13,12 @@ has place of production,schema,locationCreated
 has production company,schema,productionCompany
 has content location,schema,contentLocation
 has location,crm,P55_has_current_location
+happened in,lode,atPlace
 is held by,crm,P50_has_current_keeper
 has provider,dcterms,source
 is part of,schema,isPartOf
 has book format,schema,bookFormat
-has format,schema,encodingFormat
+has format,dcterms,format
 has technique,crm,P32_used_general_technique
 has material,crm,P45_consists_of
 has language,crm,P72_has_language
@@ -36,3 +37,4 @@ depicts,crm,P62_depicts
 has donor,schema,acquiredFrom
 inspired by,crm,P15_was_influenced_by
 is related to,schema,relatedTo
+involved in,lode,involvedAgent
