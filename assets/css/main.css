@@ -81,6 +81,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  overflow: auto;
 }
 
 a {
@@ -129,7 +130,7 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 50px;
+  font-size: 30px;
   font-family: var(--sitename-font);
   margin: 0;
   font-weight: 700;
