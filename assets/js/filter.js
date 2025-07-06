@@ -1,11 +1,19 @@
 // // // JS for csv tables
 document.addEventListener("DOMContentLoaded", function () {
   const filters = document.querySelectorAll("#tableFilters li");
-  const tables = document.querySelectorAll(".csv-table");
+  const csvContainer = document.querySelector("#csv .isotope-container");
+  const metadataContainer = document.querySelector("#metadata .isotope-container");
+  const csvTables = csvContainer.querySelectorAll(".csv-table");
 
-  // Initialize Isotope
-  const iso = new Isotope('.isotope-container', {
+  // Separate Isotope instances
+  const csvIsotope = new Isotope(csvContainer, {
     itemSelector: '.isotope-item',
+    layoutMode: 'fitRows'
+  });
+
+    // ✅ NEW: Metadata Isotope setup
+  const metadataIsotope = new Isotope('#metadata .metadata-container', {
+    itemSelector: '.metadata-item',
     layoutMode: 'fitRows'
   });
 
@@ -16,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (activeFilter) activeFilter.classList.add("filter-active");
 
     // Show/hide tables
-    tables.forEach(table => {
+    csvTables.forEach(table => {
       if (table.classList.contains(filterValue.slice(1))) {
         table.classList.add("active");
       } else {
@@ -24,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Trigger Isotope filter
-    iso.arrange({ filter: filterValue });
+    // Keep images always visible when filtering tables
+    csvIsotope.arrange({ filter: filterValue });
   }
 
   // Show the first table on load

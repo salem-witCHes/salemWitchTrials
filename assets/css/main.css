@@ -938,38 +938,7 @@ section,
 }
 
 .portfolio .portfolio-item {
-  display: flex;
-  flex-direction: column ;
-  height: 100% ;
-  background: var(--background-color);
-  border: 1px solid #ddd;
-  padding: 10px ;
-  box-sizing: border-box;
-}
-
-/* Ensure images don't overflow */
-.portfolio .portfolio-item img {
-  max-height: 200px;
-  object-fit: cover;
-  width: 100%;
-  border-radius: 6px;
-}
-
-.portfolio .portfolio-info {
   position: relative;
-  opacity: 1;
-  bottom: 0;
-  margin-top: auto;
-  background-color: rgba(0, 0, 0, 0.6); /* optional darker overlay */
-  color: white;
-  padding: 10px;
-  border-radius: 0 0 6px 6px;
-}
-
-.portfolio .portfolio-info p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -1022,6 +991,7 @@ section,
   opacity: 1;
   bottom: 20px;
 }
+
 
 
 /* Csv tables */
