@@ -842,6 +842,14 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+.introduction {
+  max-width: 900px;
+  text-align: left;
+  margin: auto;
+  column-count: 2;
+  column-gap: 30px;
+}
+
 /*--------------------------------------------------------------
 # section-separator Section
 --------------------------------------------------------------*/
