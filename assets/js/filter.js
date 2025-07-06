@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     layoutMode: 'fitRows'
   });
 
-    // ✅ NEW: Metadata Isotope setup
+    // Metadata Isotope setup
   const metadataIsotope = new Isotope('#metadata .metadata-container', {
     itemSelector: '.metadata-item',
     layoutMode: 'fitRows'
