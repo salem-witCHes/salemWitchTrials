@@ -294,11 +294,14 @@
         <p>To further enhance semantic clarity and ensure disambiguation, we incorporated authority control by linking relevant entities to authoritative identifiers from Wikidata and VIAF. This not only improves data quality but also promotes interoperability and reuse in broader Linked Data ecosystems.</p>
       </div><!-- End Section Title -->
 
-      <div class="map-wrapper">
-        <div class="zoom-container">
-          <img class="zoom-img" src="assets/img/theoretical_model.png" alt="Theoretical Model">
+      <div class="center-container">
+        <div class="map-wrapper">
+          <div class="zoom-container">
+            <img class="zoom-img" src="assets/img/theoretical_model.png" alt="Theoretical Model">
+          </div>
         </div>
       </div>
+      
 
     </section><!-- / Section -->
 
@@ -320,11 +323,14 @@
 
       </div><!-- End Section Title -->
 
-      <div class="map-wrapper">
-        <div class="zoom-container">
-          <img class="zoom-img" src="assets/img/conceptual_model.png" alt="Theoretical Model">
+      <div class="center-container">
+        <div class="map-wrapper">
+          <div class="zoom-container">
+            <img class="zoom-img" src="assets/img/conceptual_model.png" alt="Theoretical Model">
+          </div>
         </div>
       </div>
+      
         
 
     </section>
@@ -706,11 +712,10 @@
       <!-- Display HTML text production -->
       
       <div class="container mt-5">
-          <div class="Know-repr container xml-html section-title">
-            <h2>HTML Representation</h2>
-            <p>The XML to HTML transformation was carried out via a command-line process. The result is presented below.</p>
-            <iframe src="text_transformation/aShortHistory.html" title="A short History"></iframe>
-          </div>
+        <div class="Know-repr container xml-html section-title">
+          <h2>HTML Representation</h2>
+          <p>The XML to HTML transformation was carried out via a command-line process. The result is presented below.</p>
+          <iframe src="text_transformation/aShortHistory.html" title="A short History"></iframe>
         </div>
       </div>
       
@@ -718,354 +723,35 @@
       <!--Section Title-->
       <div class="container section-title" data-aos="fade-up" id="rdf">
         <div class="container mt-5">
-            <div class="Know-repr container rdf section-title">
-              <h2>RDF dataset</h2>
-              <p>Using Python, the team produced an RDF dataset that semantically connects all the CSV files representing the ten selected cultural items. This process involved structuring the data to establish meaningful relationships between entities, aligning them with Linked Open Data principles to enhance interoperability and contextual understanding.</p>
-              <iframe src="second_try.ttl" title="rdf dataset"></iframe>
-            </div>
+          <div class="Know-repr container rdf section-title">
+            <h2>RDF dataset</h2>
+            <p>Using Python, the team produced an RDF dataset that semantically connects all the CSV files representing the ten selected cultural items. This process involved structuring the data to establish meaningful relationships between entities, aligning them with Linked Open Data principles to enhance interoperability and contextual understanding.</p>
+            <p>The following ontology was generated from the transformation of CSV files into Turtle format. It represents the relationships between the selected items and the key concepts of our project.</p>
+            <p>Turtle files can be downloaded <a href="rdf_zip.zip" download><strong>here</strong></a>.</p>
+            <pre id="ttl-display">
+            </pre>
           </div>
         </div>
       </div>
+
+      <script>
+        fetch("https://gist.githubusercontent.com/sararoggi/a82ae59aec4b108c27394611fd34121f/raw/8389220f7819ea25f2891cbc128ee147edf0bf16/gistfile1.txt")
+          .then(response => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById("ttl-display").textContent = data;
+          })
+          .catch(error => {
+            document.getElementById("ttl-display").textContent = "Failed to load Turtle file: " + error;
+          });
+      </script>
       
 
-      <div class="container section-title" data-aos="fade-up" id="rdf">
-        <h2>RDF dataset</h2>
-        <p>Using Python, the team produced an RDF dataset that semantically connects all the CSV files representing the ten selected cultural items. This process involved structuring the data to establish meaningful relationships between entities, aligning them with Linked Open Data principles to enhance interoperability and contextual understanding.</p>
-      </div><!-- End Section Title -->
 
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="prefixes position-relative">
-              <h4><span>Prefixes</span></h4>
-              <p>
-                @base &lt;https://w3id.org/salemWitchTrials/&gt; .<br>
-                @prefix crm: &lt;http://www.cidoc-crm.org/cidoc-crm/&gt; .<br>
-                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .<br>
-                @prefix fabio: &lt;http://purl.org/spar/fabio&gt; .<br>
-                @prefix schema: &lt;https://schema.org/&gt; .<br>
-                @prefix viaf: &lt;http://viaf.org/viaf/&gt; .<br>
-                @prefix wd: &lt;https://www.wikidata.org/wiki/&gt; .<br>
-                @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .<br>
-                @prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .<br>
-                @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .<br>
-                @prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .<br>
-                @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="rdf-keywords rdf-active">
-              <h4><span class="key-words"></span> <span>Keywords</span></h4>
-              
-              <div class="rdf-item">
-                <h5>
-                  <span class="num">1.</span> 
-                  <span>Elizabeth Howe</span>
-                </h5>
-                <p>&lt;person/elizabeth_howe&gt; a foaf:Person .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    foaf:name "Elizabeth Jackson Howe"@en ;
-                    owl:sameAs viaf:53375579 , wd:Q15452871 ;
-                    schema:birthDate "1637-05-14"^^xsd:date ;
-                    schema:deathDate "1692-07-19"^^xsd:date ;
-                    dcterms:description "Elizabeth Howe was one of the accused in the Salem witch trials. She was found guilty and executed on July 19, 1692."@en .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div>
-
-              <div class="rdf-item">
-                <h5><span class="num">2.</span> <span>Bridget Bishop</span></h5>
-                <p>&lt;person/bridget_bishop&gt; a foaf:Person .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    foaf:name "Bridget Bishop" ;
-                    owl:sameAs wd:Q3644584 ;
-                    schema:birthDate "1632-01-01"^^xsd:date ; #approximate
-                    schema:deathDate "1692-06-10"^^xsd:date ;
-                    dcterms:description "woman executed for witchcraft during Salem witch trials"@en .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-
-              <div class="rdf-item">
-                <h5><span class="num">3.</span> <span>Salem</span></h5>
-                <p>&lt;place/salem&gt; a schema:Place .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    schema:name "Salem" ;
-                    owl:sameAs viaf:234136066 , wd:Q54140;
-                    schema:Event &lt;https://w3id.org/salemWitchTrials/event/salem_witch_trials&gt; ;
-                    dcterms:description "city in Massachusetts, United States"@en .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-
-              <div class="rdf-item">
-                <h5><span class="num">4.</span> <span>Witchcraft</span></h5>
-                <p>&lt;concept/witchcraft&gt; a skos:Concept .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    skos:prefLabel "Witchcraft"@en ;
-                    owl:sameAs wd:Q259745 ;
-                    dcterms:description "belief in possibility of or attempts to trigger supernatural processes not possible per natural laws; alleged or fictional practice of magical skills and abilities"@en .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-
-              <div class="rdf-item">
-                <h5><span class="num">5.</span> <span>Salem Witch Trials</span></h5>
-                <p>&lt;event/salem_witch_trials&gt; a schema:Event .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    schema:name "Salem Witch Trials"@en ;
-                    owl:sameAs wd:Q219698 ;
-                    schema:about &lt;https://w3id.org/salemWitchTrials/concept/witchcraft&gt; ;
-                    schema:startDate "1692-02"^^xsd:gYearMonth ;
-                    schema:endDate "1693-05"^^xsd:gYearMonth ;
-                    dcterms:description "series of hearings and prosecutions of people accused of witchcraft in colonial Massachusetts"@en .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-            </div>
-
-          </div>
-
-          <div class="row mt-5" data-aos="fade-up" data-aos-delay="300">
-            
-            <div class="col-lg-6">
-              <div class="rdf-item rdf-active">
-                <h4><span class="rdf-items"></span> <span>Items</span></h4>
-                
-                <div class="rdf-item">
-                  <h5><span class="num">1.</span> <span>A Short History of the Salem Witchcraft Trials</span></h5>
-                  <p>&lt;A_Short_History_of_the_Salem_Witchcraft_Trials&gt; crm:P2_has_type wd:Q571 .</p>
-                  <div class="rdf-content" style="display: none;">
-                    <p style="white-space: pre-wrap">
-                      fabio:hasPageCount "76" ;
-                      fabio:hasPlaceOfPublication &lt;place/salem&gt; ;
-                      crm:P102_has_title "A Short History of the Salem Village Witchcraft Trials: : illustrated by a verbatim report of the trial of Mrs. Elizabeth Howe, a memorial of her" ;
-                      crm:P50_has_current_keeper wd:Q7603401 ;
-                      crm:P72_has_language wd:Q1860 ;
-                      schema:about &lt;concept/witchcraft&gt;,
-                          &lt;event/salem_witch_trials&gt; ;
-                      schema:author viaf:94991968 ;
-                      schema:bookFormat wd:Q11060274 ;
-                      schema:datePublished "1911" ;
-                      schema:mentions &lt;person/bridget_bishop&gt;,
-                          &lt;person/elizabeth_howe&gt;,
-                          wd:Q3568979,
-                          wd:Q380719 .
-                    </p>
-                  </div>
-                  <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-                </div><!-- End rdf item-->
-
-                
-                <div class="rdf-item">
-                  <h5><span class="num">2.</span> <span>The Court Warrant Document</span></h5>
-                  <p>&lt;Court_Warrant_Document&gt; crm:P2_has_type wd:Q2334719 .</p>
-                  <div class="rdf-content" style="display: none;">
-                    <p style="white-space: pre-wrap">
-                      dcterms:source wd:Q7185913 ;
-                      crm:P102_has_title "Warrant for the execution of Bridget Bishop, and officer's return" ;
-                      crm:P43_has_dimension "21.1 x 34.6 cm" ;
-                      crm:P50_has_current_keeper wd:Q2002625 ;
-                      crm:P62i_is_depicted_by "Execution of Bridget Bishop" ;
-                      crm:P72_has_language wd:Q1860 ;
-                      schema:about &lt;concept/witchcraft&gt;,
-                          &lt;event/salem_witch_trials&gt;,
-                          &lt;person/bridget_bishop&gt; ;
-                      schema:contributor wd:Q3568979 ;
-                      schema:creator wd:Q7116266 ;
-                      schema:dateCreated "1692-06" ;
-                      schema:isPartOf "Massachusetts Court of Oyer and Terminer records (DEP 01)" ;
-                      schema:locationCreated wd:Q771 .
-                    </p>
-                  </div>
-                  <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-                </div><!-- End rdf item-->
-
-                <div class="rdf-item">
-                  <h5><span class="num">3.</span> <span>The <i>Examination of a Witch</i> panting</span></h5>
-                  <p>&lt;Examination_of_a_Witch_painting&gt; crm:P2_has_type wd:Q3305213 .</p>
-                  <div class="rdf-content" style="display: none;">
-                    <p style="white-space: pre-wrap">
-                      crm:P102_has_title "Examination of a Witch" ;
-                      crm:P32_used_general_technique wd:Q115654970 ;
-                      crm:P50_has_current_keeper wd:Q3373790 ;
-                      crm:P55_has_current_location &lt;place/salem&gt; ;
-                      crm:P62_depicts &lt;event/salem_witch_trials&gt;,
-                          wd:Q16859689 ;
-                      schema:author wd:Q3531432 ;
-                      schema:dateCreated "1853" ;
-                      schema:height "38 1/2 inches" ;
-                      schema:width "54 inches" .
-                    </p>
-                  </div>
-                  <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-                </div><!-- End rdf item-->
-
-                <div class="rdf-item">
-                  <h5><span class="num">4.</span> <span>The Execution of Bridget Bishop</span></h5>
-                  <p>&lt;Execution_of_Bridget_Bishop&gt; crm:P2_has_type wd:Q487623 .</p>
-                  <div class="rdf-content" style="display: none;">
-                    <p style="white-space: pre-wrap">
-                      crm:P102_has_title "Execution of Bridget Bishop at Salem, 1692" ;
-                      crm:P43_has_dimension "8.3 x 10.2 cm" ;
-                      crm:P50_has_current_keeper wd:Q1507284 ;
-                      schema:about &lt;event/salem_witch_trials&gt;,
-                          &lt;person/bridget_bishop&gt; ;
-                      schema:author wd:Q52150099 ;
-                      schema:dateCreated "c. 1885" ;
-                      schema:isPartOf "American History: 1607-92" .
-                    </p>
-                  </div>
-                  <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-                </div><!-- End rdf item-->
-
-                <div class="rdf-item">
-                  <h5><span class="num">5.</span> <span>Look 45 Dress</span></h5>
-                  <p>&lt;Look_45_dress&gt; crm:P2_has_type schema:CreativeWork .</p>
-                  <div class="rdf-content" style="display: none;">
-                    <p style="white-space: pre-wrap">
-                      crm:P102_has_title "Look 45, dress" ;
-                      crm:P15_was_influenced_by &lt;person/elizabeth_howe&gt; ;
-                      crm:P45_consists_of wd:Q11474,
-                          wd:Q182045,
-                          wd:Q37681,
-                          wd:Q910194 ;
-                      crm:P50_has_current_keeper wd:Q1464509 ;
-                      crm:P55_has_current_location wd:Q3141 ;
-                      schema:about &lt;event/salem_witch_trials&gt; ;
-                      schema:acquiredFrom viaf:25157279880703301940 ;
-                      schema:creator wd:Q207939 ;
-                      schema:dateCreated "2007" ;
-                      schema:hasMeasurement "208 cm (centre back), 34 cm (waist flat)" ;
-                      schema:isPartOf wd:Q133456206 ;
-                      schema:locationCreated wd:Q38 .
-                    </p>
-                  </div>
-                  <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-                </div><!-- End rdf item-->
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="rdf-item">
-                <h5><span class="num">6.</span> <span>Map of Salem Village</span></h5>
-                <p>&lt;Map_of_Salem_Village&gt; crm:P2_has_type wd:Q4006 .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    crm:P102_has_title "Map of Salem Village 1692" ;
-                    crm:P43_has_dimension "11 x 17 cm" ;
-                    crm:P50_has_current_keeper wd:Q894583 ;
-                    crm:P72_has_language wd:Q1860 ;
-                    schema:contentLocation &lt;place/salem&gt; ;
-                    schema:creator wd:Q134708539 ;
-                    schema:dateCreated "1866" ;
-                    schema:encodingFormat wd:Q129613939 ;
-                    schema:isPartOf wd:Q7051939 .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-
-              <div class="rdf-item">
-                <h5><span class="num">7.</span> <span>Playbill: the Crucible</span></h5>
-                <p>&lt;Playbill:_The_Crucible&gt; crm:P2_has_type wd:Q429785 .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    crm:P102_has_title wd:Q1183443 ;
-                    crm:P45_consists_of wd:Q11472,
-                        wd:Q127418 ;
-                    crm:P50_has_current_keeper wd:Q110453413 ;
-                    schema:about &lt;event/salem_witch_trials&gt;,
-                        "Theater" ;
-                    schema:author wd:Q80596 ;
-                    schema:dateCreated "1953" ;
-                    schema:hasMeasurement "9 in x 6 5/8 in" ;
-                    schema:locationCreated wd:Q1384 .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-
-              <div class="rdf-item">
-                <h5><span class="num">8.</span> <span>Salem Tv Serie</span></h5>
-                <p>&lt;Salem_TV_Series&gt; crm:P2_has_type wd:Q5398426 .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    dcterms:source wd:Q37312 ;
-                    crm:P102_has_title &lt;place/salem&gt; ;
-                    crm:P72_has_language wd:Q1860 ;
-                    schema:about &lt;event/salem_witch_trials&gt; ;
-                    schema:actor wd:Q958227 ;
-                    schema:author wd:Q4679789,
-                        wd:Q540510 ;
-                    schema:contentLocation &lt;place/salem&gt; ;
-                    schema:genre wd:Q200092 ;
-                    schema:locationCreated wd:Q1588 ;
-                    schema:numberOfSeasons "3" ;
-                    schema:productionCompany wd:Q8962119 ;
-                    schema:startDate "2014-04-20" .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-
-              <div class="rdf-item">
-                <h5><span class="num">9.</span> <span>Postcard: The Witch House</span></h5>
-                <p>&lt;The_Witch_House&gt; crm:P2_has_type wd:Q478798 .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    crm:P102_has_title "The Witch House" ;
-                    crm:P50_has_current_keeper wd:Q39069597 ;
-                    crm:P62_depicts wd:Q3947 ;
-                    crm:P72_has_language wd:Q1860 ;
-                    schema:about &lt;place/salem&gt;,
-                        wd:Q12271 ;
-                    schema:encodingFormat wd:Q2195 ;
-                    schema:isPartOf "Salem Postcards" ;
-                    schema:locationCreated &lt;place/salem&gt; .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-
-              <div class="rdf-item">
-                <h5><span class="num">10.</span> <span>The Wonders of the Invisible World</span></h5>
-                <p>&lt;The_Wonders_of_the_Invisible_World&gt; crm:P2_has_type wd:Q571 .</p>
-                <div class="rdf-content" style="display: none;">
-                  <p style="white-space: pre-wrap">
-                    dcterms:publisher "Benjamin Harris for Samuel Phillips" ;
-                    dcterms:source wd:Q131454 ;
-                    fabio:hasPlaceOfPublication wd:Q100 ;
-                    crm:P102_has_title "The Wonders of the Invisible World" ;
-                    crm:P72_has_language wd:Q1860 ;
-                    schema:about &lt;concept/witchcraft&gt;,
-                        &lt;event/salem_witch_trials&gt; ;
-                    schema:author wd:Q380719 ;
-                    schema:bookFormat wd:Q11060274 ;
-                    schema:datePublished "1693" ;
-                    schema:isPartOf wd:Q132754052 ;
-                    schema:relatedTo wd:Q3568979 .
-                  </p>
-                </div>
-                <i class="rdf-toggle bi bi-chevron-right" style="cursor: pointer;"></i>
-              </div><!-- End rdf item-->
-            </div>
-          </div>
-              
-        </div>
-      </div>
 
     <!-- Section separator -->
     <section id="section-separator" class="section-separator section accent-background">
@@ -1161,7 +847,7 @@
     <div class="container">
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">Salem WitCHes</strong> <span>All Rights Reserved</span></p>
-        <p>This site was created for the final project of the course <em>Digital Heritage and Multimedia</em>, University of Bologna, 2025.</p>
+        <p>This site was created for the final project of the course <em>Information Science and Cultural Heritage</em>, University of Bologna, 2025.</p>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

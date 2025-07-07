@@ -1061,11 +1061,20 @@ section,
   background-color: #55304d; 
 }
 
+.center-container {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* optional: vertical centering */
+  width: 100%;
+}
 
 .map-wrapper {
   padding: 0; 
   box-sizing: border-box;
   overflow-x: auto; /* horizontal scroll if zoomed */
+  display: inline-block;
+  border: 1px solid var(--background-color);
+  border-radius: 10px; /* rounded corners */
 }
 
 .zoom-container {
@@ -1143,14 +1152,16 @@ section,
 .xml-html iframe {
   display: block;
   margin: 0 auto;
-  /* margin-left: auto;
-  margin-right: auto; */
   height: 700px;
   width: 80%;
-  /* width: 700px; */
-  /* border: 3px solid green; */
-  padding: 10px; 
+  padding: 10px;
+  border: 1px solid var(--background-color);
+  border-radius: 15px;              
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #e4cc93;
 }
+
 
 .xml-html iframe::-webkit-scrollbar {
   display: none;
@@ -1249,6 +1260,21 @@ section,
 .rdf-dataset .rdf-container .rdf-active .rdf-toggle {
   transform: rotate(90deg);
   color: var(--accent-color);
+}
+
+
+#ttl-display {
+  border: 1px solid #000000;
+  border-radius: 10px; /* rounded corners */
+  background: rgb(189, 178, 228, 0.4);
+  color: var(--contrast-color);
+  padding: 1em;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow: auto;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  text-align: left;
 }
 
 /*--------------------------------------------------------------
