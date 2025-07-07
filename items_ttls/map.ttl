@@ -1,0 +1,17 @@
+@base <https://w3id.org/salemWitchTrials/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+
+<Map_of_Salem_Village> dcterms:format wd:Q129613939 ;
+    crm:P102_has_title "Map of Salem Village 1692" ;
+    crm:P2_has_type wd:Q4006 ;
+    crm:P43_has_dimension "11 x 17 cm" ;
+    crm:P50_has_current_keeper wd:Q894583 ;
+    crm:P72_has_language wd:Q1860 ;
+    schema:contentLocation <place/salem> ;
+    schema:creator wd:Q134708539 ;
+    schema:dateCreated "1866" ;
+    schema:isPartOf wd:Q7051939 .
+

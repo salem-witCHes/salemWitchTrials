@@ -1,0 +1,22 @@
+@base <https://w3id.org/salemWitchTrials/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+
+<Court_Warrant_Document> dcterms:source wd:Q7185913 ;
+    crm:P102_has_title "Warrant for the execution of Bridget Bishop, and officer's return" ;
+    crm:P2_has_type wd:Q2334719 ;
+    crm:P43_has_dimension "21.1 x 34.6 cm" ;
+    crm:P50_has_current_keeper wd:Q2002625 ;
+    crm:P62i_is_depicted_by "Execution of Bridget Bishop" ;
+    crm:P72_has_language wd:Q1860 ;
+    schema:about <concept/witchcraft>,
+        <event/salem_witch_trials>,
+        <person/bridget_bishop> ;
+    schema:contributor wd:Q3568979 ;
+    schema:creator wd:Q7116266 ;
+    schema:dateCreated "1692-06" ;
+    schema:isPartOf "Massachusetts Court of Oyer and Terminer records (DEP 01)" ;
+    schema:locationCreated wd:Q771 .
+

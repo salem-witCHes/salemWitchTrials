@@ -45,20 +45,21 @@ with open("mapping_entities.csv", encoding="utf-8") as f:
 # print(my_entities)
 
 
-# Initialize RDF graph
-g = rdflib.Graph()
-for prefix, ns in namespaces.items():
-    g.bind(prefix, ns)
-
-
 # List for our items
-csv_items = []
+
 csv_items_prefix = "item/"
 
 # Read CSVs in folder
-folder = "./csv_files"
+folder = "csv_files"
 for file in os.listdir(folder):
     if file.endswith(".csv"):
+        # Initialize RDF graph
+        g = rdflib.Graph()
+        for prefix, ns in namespaces.items():
+            g.bind(prefix, ns)
+
+        csv_items = []
+
         path = os.path.join(folder, file)
         with open(path, newline='', encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
@@ -98,9 +99,12 @@ for file in os.listdir(folder):
                 # Add triple to the graph
                 g.add((subj, predicate, obj))
 
-# for s,p,o in g.triples((None, None, None)):
-#     print(s,p,o)
+                # for s,p,o in g.triples((None, None, None)):
+                #     print(s,p,o)
 
-# Serialize the graph to Turtle format
-g.serialize(destination="second_try.ttl", format="ttl", base=BASE) 
+                # Serialize the graph to Turtle format
+                ttl_filename = os.path.splitext(file)[0] + ".ttl"
+                g.serialize(destination=os.path.join("items_ttls", ttl_filename), format="ttl", base=BASE) 
+
+
 
