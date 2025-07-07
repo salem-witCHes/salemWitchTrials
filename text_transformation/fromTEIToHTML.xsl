@@ -17,12 +17,12 @@
         </html>
     </xsl:template>
 
-    <!-- teplate for titlePage -->
+    <!-- template for front page -->
     <xsl:template match="tei:front/tei:titlePage">
         <div class="front-page">
             <!-- main Title -->
             <div class="title-main">
-                <xsl:for-each select="tei:docTitle/tei:titlePart[@type='main']/tei:p">
+                <xsl:for-each select="tei:docTitle/tei:titlePart[@type='main']/tei:title">
                     <p class="title-main-line n{@n}">
                         <xsl:apply-templates/>
                     </p>
@@ -31,7 +31,7 @@
 
             <!-- subtitle -->
             <div class="title-sub">
-                <xsl:for-each select="tei:docTitle/tei:titlePart[@type='sub']/tei:p">
+                <xsl:for-each select="tei:docTitle/tei:titlePart[@type='sub']/tei:title">
                     <p class="title-sub-line n{@n}">
                         <xsl:apply-templates/>
                     </p>
@@ -40,7 +40,7 @@
 
             <!-- descriptive title -->
             <div class="title-desc">
-                <xsl:value-of select="tei:docTitle/tei:titlePart[@type='desc']/tei:p"/>
+                <xsl:value-of select="tei:docTitle/tei:titlePart[@type='desc']/tei:title"/>
             </div>
 
             <!-- figure -->
@@ -121,44 +121,37 @@
     <!-- page div -->
     <xsl:template match="tei:div">
         <xsl:apply-templates select="tei:pb"/>
-        <xsl:apply-templates select="tei:titlePage"/>
+        <div class="page-header">
+            <xsl:apply-templates select="tei:fw[@rend='left']"/>
+            <xsl:apply-templates select="tei:fw[@rend='center']"/>
+        </div>
+        <xsl:apply-templates select="tei:head"/>
         <xsl:apply-templates select="tei:p"/>
     </xsl:template>
 
 
-    <xsl:template match="tei:titlePage">
+    <xsl:template match="tei:head">
         <div class="titlePage">
             <xsl:value-of select="."/>
         </div>
     </xsl:template>
 
     <xsl:template match="tei:pb">
-        <hr class="page-divider"/>
-        <div class="page-header">
-            <div class="fw left">
-            <xsl:value-of select="tei:fw[@rend='left']"/>
-            </div>
-            <div class="fw center">
-            <xsl:value-of select="tei:fw[@rend='center']"/>
-            </div>
-            <div class="fw right"><!-- placeholder --></div>
-        </div>
-        
+        <hr class="page-divider"/>    
     </xsl:template>
 
-    <xsl:template match="tei:fw">
-        <xsl:choose>
-            <xsl:when test="@rend='center'">
-                <div class="fw center">
-                    <xsl:value-of select="."/>
-                </div>
-            </xsl:when>
-            <xsl:when test="@rend='left'">
-                <div class="fw left">
-                    <xsl:value-of select="."/>
-                </div>
-            </xsl:when>
-        </xsl:choose>
+    <!-- Page number (left) -->
+    <xsl:template match="tei:fw[@rend='left']">
+        <div class="fw left">
+            <xsl:value-of select="."/>
+        </div>
+    </xsl:template>
+
+    <!-- Centered header -->
+    <xsl:template match="tei:fw[@rend='center']">
+        <div class="fw center">
+            <xsl:value-of select="."/>
+        </div>
     </xsl:template>
 
     <!-- paragraphs -->
