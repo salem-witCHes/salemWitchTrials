@@ -1,10 +1,8 @@
 import os
-import pprint
 import csv 
-import hashlib
 import rdflib
 from rdflib import Graph, URIRef, Literal, Namespace
-from rdflib.namespace import RDF, RDFS, XSD, DC
+from rdflib.namespace import RDFS
 
 # Namespaces 
 BASE = Namespace("https://w3id.org/salemWitchTrials/")
@@ -25,7 +23,7 @@ namespaces = {
 
 # Predicate mapping
 predicate_map = {} # dictionary for storing RDF URI
-with open("mapping.csv", encoding="utf-8") as f:
+with open("RDF dataset/mapping.csv", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
         nl_predicate = row["predicate"]
@@ -36,7 +34,7 @@ with open("mapping.csv", encoding="utf-8") as f:
 
 # Entities mapping 
 mapping_entities = {}
-with open("mapping_entities.csv", encoding="utf-8") as f:
+with open("RDF dataset/mapping_entities.csv", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
         mapping_entities[row["object"]] = row["entity"]
@@ -104,8 +102,6 @@ for file in os.listdir(folder):
                 # Add triple to the graph
                 g.add((subj, predicate, object))
 
-                # for s,p,o in g.triples((None, None, None)):
-                #     print(s,p,o)
 
     # Serialize the graph to Turtle format
     ttl_filename = os.path.splitext(file)[0] + ".ttl"
