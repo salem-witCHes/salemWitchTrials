@@ -31,8 +31,8 @@
   --default-color: #f1f6e1; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #5d558b; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #f5d507; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #628B48; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --surface-color: #628B48;  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #080D12; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -78,14 +78,14 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
+  color: var(--contrast-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
   overflow: auto;
 }
 
 a {
-  color: var(--default-color);
+  color: var(--contrast-color);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -97,11 +97,15 @@ a:hover {
 
 h1,
 h2,
-h3,
+h3 {
+  color: var(--default-color);
+  font-family: var(--heading-font);
+}
+
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: var(--contrast-color);
   font-family: var(--heading-font);
 }
 
@@ -621,8 +625,15 @@ section,
   margin: auto;
 }
 
-.section-title p {
-  margin-bottom: 0;
+.section-title p,
+.section-title ul {
+  color: var(--contrast-color);
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
 }
 
 /*--------------------------------------------------------------
@@ -716,6 +727,16 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
+}
+
+.domain p,
+.project p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
 }
 
 .domain .skills-content h5 {
@@ -973,7 +994,7 @@ section,
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   font-size: 14px;
   margin-bottom: 0;
   padding-right: 50px;
@@ -985,7 +1006,7 @@ section,
   right: 50px;
   font-size: 24px;
   top: calc(50% - 14px);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
   transition: 0.3s;
   line-height: 0;
 }
@@ -1038,8 +1059,6 @@ section,
 .csv-table th {
   background-color: #55304d; 
 }
-
-
 
 
 .map-wrapper {
@@ -1098,6 +1117,15 @@ section,
   }
 }
 
+
+/*--------------------------------------------------------------
+# text transformation
+--------------------------------------------------------------*/
+.text-transformation .service-item p {
+  color: var(--contrast-color);
+}
+
+
 /*--------------------------------------------------------------
 # I-frame XML to HTML transformation
 --------------------------------------------------------------*/
@@ -1135,7 +1163,7 @@ section,
 
 .rdf-dataset .content p {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 30%);
 }
 
 .rdf-dataset .rdf-container .rdf-item {

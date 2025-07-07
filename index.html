@@ -268,7 +268,7 @@
                   <tr><td>Examination of a Witch</td><td>Painting</td><td>Peabody Essex Museum (Salem, Massachusetts)</td><td>Open Graph/Schema.org*</td></tr>
                   <tr><td>A short history of the Salem village witchcraft trials</td><td>Book</td><td>State Library of Massachusetts (Boston, Massachusetts)</td><td>MARC/Dublin Core</td></tr>
                   <tr><td>Look 45, dress</td><td>Garment</td><td>National Gallery of Victoria (Melbourne, Victoria)</td><td>AGLS (Dublin Core based)</td></tr>
-                  <tr><td>The Crucible playbill</td><td>Poster</td><td>National Museum Of American History (Waschington, D.C.)</td><td>Dublin Core*</td></tr>
+                  <tr><td>The Crucible playbill</td><td>Poster</td><td>National Museum Of American History (Washington, D.C.)</td><td>Dublin Core*</td></tr>
                   <tr><td>The Witch House</td><td>Image</td><td>Salem Public Library (Salem, Massachusetts)</td><td>Dublin Core</td></tr>
                   <tr><td>Execution of Bridget Bishop</td><td>Photography</td><td>George Eastman Museum (Rochester, New York)</td><td>Dublin Core*</td></tr>
                   <tr><td>Salem</td><td>Tv Series</td><td>IMDb</td><td>Schema.org</td></tr>
@@ -287,7 +287,7 @@
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Theoretical model</h2>
-        <p>OTo develop a theoretical model, the team began with a preliminary conceptual sketch on paper to explore the main relationships between the entities involved. This early visual mapping allowed us to identify recurring themes and connections - such as key people, concepts, time spans, and places - that helped to reveal the highly interconnected nature of our domain.</p>
+        <p>To develop a theoretical model, the team began with a preliminary conceptual sketch on paper to explore the main relationships between the entities involved. This early visual mapping allowed us to identify recurring themes and connections - such as key people, concepts, time spans, and places - that helped to reveal the highly interconnected nature of our domain.</p>
         <p>This worked as a foundation for building the theoretical model presented here, which graphically displays all the identified properties and relationships using natural language, offering a comprehensive overview of the domain and its internal logic.</p>
         <p>To further enhance semantic clarity and ensure disambiguation, we incorporated authority control by linking relevant entities to authoritative identifiers from Wikidata and VIAF. This not only improves data quality but also promotes interoperability and reuse in broader Linked Data ecosystems.</p>
       </div><!-- End Section Title -->
@@ -650,14 +650,14 @@
         <p>In the following section, all the documents created are presented and available for consultation.</p>
       </div><!-- End Section Title -->
 
-      <div class="container">
+      <div class="container text-transformation">
 
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
               <div class="icon">
-                <i class="bi bi-activity"></i>
+                <i class="bi bi-book"></i>
               </div>
               <a href="text_transformation/aShortHistory.xml" target="_blank" class="stretched-link">
                 <h3> XML/TEI document</h3>
@@ -713,6 +713,16 @@
         </div>
       </div>
       
+
+      <div class="container mt-5">
+          <div class="Know-repr container rdf section-title">
+            <h2>RDF dataset</h2>
+            <p>Using Python, the team produced an RDF dataset that semantically connects all the CSV files representing the ten selected cultural items. This process involved structuring the data to establish meaningful relationships between entities, aligning them with Linked Open Data principles to enhance interoperability and contextual understanding.</p>
+            <iframe src="second_try.ttl" title="A short History"></iframe>
+          </div>
+        </div>
+      </div>
+
       <!-- RDF production -->
       <!--Section Title-->
       <div class="container section-title" data-aos="fade-up" id="rdf">
