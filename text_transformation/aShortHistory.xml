@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- to validate the xml/tei document we used this plugin for vs code: https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml 
 <?xml-model
   href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng"
   schematypens="http://relaxng.org/ns/structure/1.0"
   type="application/xml"?>
+-->
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader xml:lang="en">
         <fileDesc>
@@ -140,6 +144,7 @@
                     </place>
                 </listPlace>
             </settingDesc>
+            <!-- Although a validation error is reported, I decided to keep the element here because the TEI guidelines do not specify in which section of the teiHeader <listEvent> should be placed. -->
             <listEvent>
                 <event xml:id="salem-witch-trial" sameAs="https://www.wikidata.org/wiki/Q219698" from="1692" to="1693" type="main">
                     <eventName>Salem Witch Trials</eventName>
@@ -149,7 +154,6 @@
                     <place>
                         <placeName ref="#salem">Salem</placeName>
                     </place>
-                    <desc>series of hearings and prosecutions of people accused of witchcraft in colonial Massachusetts</desc>
                 </event>
                 <event xml:id="trial-of-EH" when="1692" type="sub">
                     <eventName>Trial of Elizabeth Howe</eventName>
@@ -218,7 +222,7 @@
             </div>
             <div type="page" n="2">
                 <pb facs="page4"/> <!-- to clearly mark the page break -->
-                <fw place="top" type="header" rend="center">THE WITCHCRAFT DELUSION</fw>        <!-- fw = forme work, contains a running head, catchword, or similar material appearing on the current page -->
+                <fw place="top" type="header" rend="center">THE WITCHCRAFT DELUSION</fw>  <!-- fw = forme work, contains a running head, catchword, or similar material appearing on the current page -->
                 <fw place="top" type="pageNum" rend="left">4</fw>
                 <p n="1">
                     the evidence by affidavits, which were written, signed, and attested, and filed in the Clerk of Court's office, where they may now be seen.
