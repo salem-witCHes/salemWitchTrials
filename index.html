@@ -663,9 +663,9 @@
               <div class="icon">
                 <i class="bi bi-book"></i>
               </div>
-              <a href="text_transformation/aShortHistory.xml" target="_blank" class="stretched-link">
-                <h3> XML/TEI document</h3>
-                <p>Link to the code</p>
+              <h3> XML/TEI document</h3>
+              <a href="text_transformation/aShortHistory.xml" target="_blank" class="stretched-link link-spacing">
+                Link to the code
               </a>
               <p>The first step in the text transformation was to create an XML/TEI document containing a sample of the book. The Text Encoding Initiative (TEI) guidelines were followed to annotate the literary text. Additionally, the text was semantically enriched with references to persons, places, and events.</p>
               <p>Since there is no single correct way to annotate a text, all encoding decisions were made based on specific project needs. The underlying approach was to encode the text in a manner that faithfully reflects the structure of the source book from which the text was derived.</p>
@@ -675,11 +675,11 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-broadcast"></i>
+                <i class="bi bi-code-slash"></i>
               </div>
-              <a href="text_transformation/fromTEIToHTML.xsl" target="_blank" class="stretched-link">
-                <h3>XML to HTML transformation</h3>
-                <p>Link to the code</p>
+              <h3>XML to HTML transformation</h3>
+              <a href="text_transformation/fromTEIToHTML.xsl" target="_blank" class="stretched-link link-spacing">
+                Link to the code
               </a>
               <p>In order to facilitate the dissemination of the previously created XML/TEI document, it has been transformed into an HTML document. This process enables the consideration of presentational aspects, as such features can be effectively displayed within a web environment.</p>
               <p>To accomplish this transformation, eXtensible Stylesheet Language Transformations (XSLT) were employed. Through the use of XPath, XML nodes within the source document were identified and subsequently manipulated to generate a new file. For the majority of the code, the templating rules were externalized. This approach was adopted as it appeared more practical to manipulate small portions of the text, which could then be rendered in a manner closely resembling the original book.</p>
@@ -690,11 +690,11 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-easel"></i>
+                <i class="bi bi-bezier2"></i>
               </div>
-              <a href="text_transformation/fromTEIToRDF.py" target="_blank" class="stretched-link">
-                <h3>XML/TEI to RDF transformation</h3>
-                <p>Link to the code</p>
+              <h3>XML/TEI to RDF transformation</h3>
+              <a href="text_transformation/fromTEIToRDF.py" target="_blank" class="stretched-link link-spacing">
+                Link to the code
               </a>
               <p>The RDF dataset was created using Python, specifically through the use of RDFLib, which enables the manipulation of RDF data, and the lxml.etree library, which provides enhanced flexibility for handling XML documents. Thi stransformation facilitates data exchange and promotes semantic interoperability.</p>
               <p>Initially, the relevant sections of the XML/TEI document required for the transformation were identified and extracted. The process subsequently involved data normalization and data type mapping to ensure consistency and alignment with semantic web standards. This methodology not only supports data exchange but also enable the availability of both data and metadata regarding relationships between entities on the web. Furthermore, it allows for the description of the semantics associated with the data through a formalism that is machine-readable.</p>

@@ -1125,6 +1125,10 @@ section,
   color: var(--contrast-color);
 }
 
+.link-spacing {
+  margin-bottom: 20px;
+  display: inline-block;
+}
 
 /*--------------------------------------------------------------
 # I-frame XML to HTML transformation
