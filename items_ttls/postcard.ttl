@@ -1,17 +1,19 @@
 @base <https://w3id.org/salemWitchTrials/> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio: <http://purl.org/spar/fabio> .
 @prefix schema: <https://schema.org/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<The_Witch_House> dcterms:format wd:Q2195 ;
+<The_Witch_House> dcterms:coverage <place/salem> ;
+    dcterms:format wd:Q2195 ;
+    dcterms:has_format wd:Q192425 ;
     crm:P102_has_title "The Witch House" ;
-    crm:P2_has_type wd:Q478798 ;
+    crm:P2_has_type fabio:StillImage ;
     crm:P50_has_current_keeper wd:Q39069597 ;
     crm:P62_depicts wd:Q3947 ;
     crm:P72_has_language wd:Q1860 ;
     schema:about <place/salem>,
         wd:Q12271 ;
-    schema:isPartOf "Salem Postcards" ;
-    schema:locationCreated <place/salem> .
+    schema:isPartOf "Salem Postcards" .
 

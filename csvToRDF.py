@@ -42,11 +42,9 @@ with open("mapping_entities.csv", encoding="utf-8") as f:
     for row in reader:
         mapping_entities[row["object"]] = row["entity"]
 
-# print(my_entities)
-
 
 # List for our items
-
+csv_items = []
 csv_items_prefix = "item/"
 
 # Read CSVs in folder
@@ -58,8 +56,6 @@ for file in os.listdir(folder):
         for prefix, ns in namespaces.items():
             g.bind(prefix, ns)
 
-        csv_items = []
-
         path = os.path.join(folder, file)
         with open(path, newline='', encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
@@ -68,7 +64,9 @@ for file in os.listdir(folder):
                 pred = row["predicate"].strip()
                 obj = row["object"].strip()
 
-                csv_items.append(subj)
+                csv_items.append([row["subject"].strip().replace(" ", "_")])
+                # csv_items.append(obj)
+                print(csv_items)
 
                 # Replace natural language predicate with property
                 if pred in predicate_map:

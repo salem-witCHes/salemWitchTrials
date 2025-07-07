@@ -9,6 +9,7 @@
 @prefix viaf: <http://viaf.org/viaf/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix lode: <http://linkedevents.org/ontology/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <person/elizabeth_howe> a foaf:Person ;
@@ -36,15 +37,21 @@
     owl:sameAs wd:Q259745 ;
     dcterms:description "belief in possibility of or attempts to trigger supernatural processes not possible per natural laws; alleged or fictional practice of magical skills and abilities"@en .
 
-
-<event/salem_witch_trials> a schema:Event ;
+<event/salem_witch_trials> a lode:Event ;
     schema:name "Salem Witch Trials"@en ;
     owl:sameAs wd:Q219698 ;
-    schema:about <https://w3id.org/salemWitchTrials/concept/witchcraft> ;
+    lode:involved <https://w3id.org/salemWitchTrials/concept/witchcraft> ;
     schema:startDate "1692-02"^^xsd:gYearMonth ;
     schema:endDate "1693-05"^^xsd:gYearMonth ;
+    lode:atPlace <https://w3id.org/salemWitchTrials/place/salem> ;
+    schema:subEvent <event/execution_of_bridget> ;
     dcterms:description "series of hearings and prosecutions of people accused of witchcraft in colonial Massachusetts"@en .
 
+<event/execution_of_bridget> a lode:Event ;
+    schema:superEvent <https://w3id.org/salemWitchTrials/concept/witchcraft> ;
+    lode:atPlace <https://w3id.org/salemWitchTrials/place/salem> ;
+    lode:involvedAgent <person/bridget_bishop> ;
+    lode:atTime "1692" ;
 
 <Examination_of_a_Witch_painting> crm:P102_has_title "Examination of a Witch" ;
     crm:P2_has_type wd:Q3305213 ;
@@ -107,20 +114,22 @@
     schema:locationCreated wd:Q1384 .
 
 
-<The_Witch_House> dcterms:format wd:Q2195 ;
+<The_Witch_House> dcterms:coverage <place/salem> ;
+    dcterms:format wd:Q2195 ;
+    dcterms:has_format wd:Q192425 ;
     crm:P102_has_title "The Witch House" ;
-    crm:P2_has_type wd:Q478798 ;
+    crm:P2_has_type fabio:StillImage ;
     crm:P50_has_current_keeper wd:Q39069597 ;
     crm:P62_depicts wd:Q3947 ;
     crm:P72_has_language wd:Q1860 ;
     schema:about <place/salem>,
         wd:Q12271 ;
-    schema:isPartOf "Salem Postcards" ;
-    schema:locationCreated <place/salem> .
+    schema:isPartOf "Salem Postcards" .
 
 
-<Execution_of_Bridget_Bishop> crm:P102_has_title "Execution of Bridget Bishop at Salem, 1692" ;
-    crm:P2_has_type wd:Q487623 ;
+<Execution_of_Bridget_Bishop> dcterms:format wd:Q166816 ;
+    crm:P102_has_title "Execution of Bridget Bishop at Salem, 1692" ;
+    crm:P2_has_type wd:Q125191 ;
     crm:P43_has_dimension "8.3 × 10.2 cm" ;
     crm:P50_has_current_keeper wd:Q1507284 ;
     schema:about <event/salem_witch_trials>,

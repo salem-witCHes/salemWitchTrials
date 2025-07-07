@@ -12,6 +12,7 @@
     crm:P62i_is_depicted_by "Execution of Bridget Bishop" ;
     crm:P72_has_language wd:Q1860 ;
     schema:about <concept/witchcraft>,
+        <event/execution_of_bridget>,
         <event/salem_witch_trials>,
         <person/bridget_bishop> ;
     schema:contributor wd:Q3568979 ;
