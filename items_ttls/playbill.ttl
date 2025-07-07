@@ -9,7 +9,7 @@
         wd:Q127418 ;
     crm:P50_has_current_keeper wd:Q110453413 ;
     schema:about <event/salem_witch_trials>,
-        "Theater" ;
+        wd:Q17172848 ;
     schema:author wd:Q80596 ;
     schema:dateCreated "1953" ;
     schema:hasMeasurement "9 in x 6 5/8 in" ;

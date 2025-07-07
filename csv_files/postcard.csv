@@ -1,11 +1,12 @@
 subject,predicate,object
 The Witch House,has title,The Witch House
-The Witch House,has type,image
+The Witch House,has type,still image
 The Witch House,is held by,Salem Public Library
 The Witch House,has format,jpeg
-The Witch House,has place of production,Salem 
+The Witch House,has original format,postcard
 The Witch House,is part of,Salem Postcards
 The Witch House,has language,English
+The Witch House,has coverage,"Salem, Essex County, Massachusetts"
 The Witch House,has subject,Salem
 The Witch House,has subject,Architecture 
 The Witch House,depicts,house
