@@ -183,11 +183,23 @@
   /**
    * Frequently Asked Questions Toggle
    */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
-    });
+
+  document.querySelectorAll('.rdf-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const content = toggle.previousElementSibling; // assuming .rdf-content is just before toggle icon
+    
+    if (content.style.display === 'none' || content.style.display === '') {
+      content.style.display = 'block';
+      toggle.classList.remove('bi-chevron-right');
+      toggle.classList.add('bi-chevron-down');
+    } else {
+      content.style.display = 'none';
+      toggle.classList.remove('bi-chevron-down');
+      toggle.classList.add('bi-chevron-right');
+    }
   });
+});
+
 
   /**
    * Init swiper sliders
@@ -249,3 +261,5 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
