@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- to validate the xml/tei document we used this plugin for vs code: https://marketplace.visualstudio.com/items?itemName=raffazizzi.sxml 
+<?xml-model
+  href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng"
+  schematypens="http://relaxng.org/ns/structure/1.0"
+  type="application/xml"?>
+-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader xml:lang="en">
         <fileDesc>
@@ -136,36 +142,42 @@
                     </place>
                 </listPlace>
             </settingDesc>
+            <!-- Although a validation error is reported, I decided to keep the element here because the TEI guidelines do not specify in which section of the teiHeader <listEvent> should be placed. -->
             <listEvent>
                 <event xml:id="salem-witch-trial" sameAs="https://www.wikidata.org/wiki/Q219698" from="1692" to="1693" type="main">
                     <eventName>Salem Witch Trials</eventName>
-                    <persName ref="#SP">Samuel Parris</persName>
-                    <placeName ref="#salem">Salem</placeName>
-                    <desc>series of hearings and prosecutions of people accused of witchcraft in colonial Massachusetts</desc>
-                    <event xml:id="trial-of-EH" when="1692" type="sub">
-                        <eventName>Trial of Elizabeth Howe</eventName>
+                    <person>
+                        <persName ref="#SP">Samuel Parris</persName>
+                    </person>
+                    <place>
+                        <placeName ref="#salem">Salem</placeName>
+                    </place>
+                </event>
+                <event xml:id="trial-of-EH" when="1692" type="sub">
+                    <eventName>Trial of Elizabeth Howe</eventName>
+                    <person>
                         <persName ref="#EH">Elizabeth Howe</persName>
-                    </event>
+                    </person>
                 </event>
             </listEvent>
         </profileDesc>
     </teiHeader>
     <text>
-        <front type="frontispiece">
+        <front>
             <titlePage>
                 <docTitle>
                     <titlePart type="main">
-                        <p n="1">A short history</p>
-                        <p n="2">of the</p>
-                        <p n="3"><event ref="#salem-witch-trial">Salem Village Witchcraft Trials</event></p>
+                        <title n="1">A short history</title>
+                        <title n="2">of the</title>
+                        <title n="3">Salem Village Witchcraft Trials</title>
                     </titlePart>
                     <titlePart type="sub">
-                        <p n="1">Illustrated by a</p>
-                        <p n="2">Verbatim Report of the Trial of</p>
-                        <p n="3"><persName ref="#EH">Mrs. Elizabeth Howe</persName></p>
+                        <title n="1">Illustrated by a</title>
+                        <title n="2">Verbatim Report of the Trial of</title>
+                        <title n="3"><persName ref="#EH">Mrs. Elizabeth Howe</persName></title>
                     </titlePart>
                     <titlePart type="desc">
-                        <p>A MEMORIAL OF HER</p>
+                        <title>A MEMORIAL OF HER</title>
                     </titlePart>
                 </docTitle>
                 <figure>
@@ -192,7 +204,7 @@
         <body>
             <div type="page" n="1">
                 <pb facs="page3"/>
-                <titlePage>Notice</titlePage>
+                <head>Notice</head>
                 <p n="1">
                     <placeName ref="#salem">Greater Salem</placeName>, the province of Governors <persName ref="#RC">Conant</persName> and <persName ref="#JE">Endicott</persName>, is visited by thousands of sojourners yearly. They come to study the Quakers and the witches, to picture the manses of the latter and the stately mansions of <placeName ref="#salem">Salem</placeName>'s commercial kings, and breathe the salubrious air of "old gray ocean."
                 </p>
@@ -207,10 +219,9 @@
                 </p>
             </div>
             <div type="page" n="2">
-                <pb facs="page4"> <!-- to clearly mark the page break -->
-                    <fw place="top" type="header" rend="center">THE WITCHCRAFT DELUSION</fw>        <!-- fw = forme work, contains a running head, catchword, or similar material appearing on the current page -->
-                    <fw place="top" type="pageNum" rend="left">4</fw>
-                </pb>
+                <pb facs="page4"/> <!-- to clearly mark the page break -->
+                <fw place="top" type="header" rend="center">THE WITCHCRAFT DELUSION</fw>  <!-- fw = forme work, contains a running head, catchword, or similar material appearing on the current page -->
+                <fw place="top" type="pageNum" rend="left">4</fw>
                 <p n="1">
                     the evidence by affidavits, which were written, signed, and attested, and filed in the Clerk of Court's office, where they may now be seen.
                 </p>

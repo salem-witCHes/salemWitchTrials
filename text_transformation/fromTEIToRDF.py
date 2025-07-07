@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as ET
-import rdflib
 from rdflib.namespace import FOAF, RDF, RDFS, XSD, DC, OWL
 from rdflib import URIRef, Literal, Namespace, Graph
 
@@ -140,8 +139,8 @@ if main_event is not None:
     my_graph.add((trials_uri, RDF.type, lode.Event))
 
     name = main_event.find("tei:eventName", ns)
-    place = main_event.find("tei:placeName", ns)
-    agent = main_event.find("tei:persName", ns)
+    place = main_event.find("tei:place/tei:placeName", ns)
+    agent = main_event.find("tei:person/tei:persName", ns)
     start_date = main_event.attrib.get("from")
     end_date = main_event.attrib.get("to")
 
@@ -152,13 +151,14 @@ if main_event is not None:
     my_graph.add((trials_uri, schema.endDate, Literal(end_date)))
     my_graph.add((trials_uri, schema.description, Literal(trials_comment)))
 
-    sub_event = main_event.find("tei:event[@type='sub']", ns)
+    sub_event = root.find(".//tei:profileDesc/tei:listEvent/tei:event[@type='sub']", ns)
     if sub_event is not None:
         trial_eh = my_ns["event/trial_of_EH"]
         my_graph.add((trial_eh, RDF.type, lode.Event))
+        my_graph.add((trials_uri, schema.subEvent, trial_eh))
 
         sub_name = sub_event.find("tei:eventName", ns)
-        sub_agent = sub_event.find("tei:persName", ns)
+        sub_agent = sub_event.find("tei:person/tei:persName", ns)
         sub_time = sub_event.attrib.get("when")
         
         my_graph.add((trial_eh, lode.involvedAgent, Literal(sub_agent.text.strip())))
