@@ -4,8 +4,8 @@
 @prefix schema: <https://schema.org/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<Salem_TV_Series> dcterms:source wd:Q37312 ;
-    crm:P102_has_title <place/salem> ;
+<item/Salem_TV_Series> dcterms:source wd:Q37312 ;
+    crm:P102_has_title "Salem" ;
     crm:P2_has_type wd:Q5398426 ;
     crm:P72_has_language wd:Q1860 ;
     schema:about <event/salem_witch_trials> ;

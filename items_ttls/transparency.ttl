@@ -4,7 +4,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<Execution_of_Bridget_Bishop> dcterms:format wd:Q166816 ;
+<item/Execution_of_Bridget_Bishop> dcterms:format wd:Q166816 ;
     crm:P102_has_title "Execution of Bridget Bishop at Salem, 1692" ;
     crm:P2_has_type wd:Q125191 ;
     crm:P43_has_dimension "8.3 × 10.2 cm" ;

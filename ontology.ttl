@@ -53,7 +53,7 @@
     lode:involvedAgent <person/bridget_bishop> ;
     lode:atTime "1692" ;
 
-<Examination_of_a_Witch_painting> crm:P102_has_title "Examination of a Witch" ;
+<item/Examination_of_a_Witch_painting> crm:P102_has_title "Examination of a Witch" ;
     crm:P2_has_type wd:Q3305213 ;
     crm:P32_used_general_technique wd:Q115654970 ;
     crm:P50_has_current_keeper wd:Q3373790 ;
@@ -66,7 +66,7 @@
     schema:width "54 inches" .
 
 
-<A_Short_History_of_the_Salem_Witchcraft_Trials> fabio:hasPageCount "76" ;
+<item/A_Short_History_of_the_Salem_Witchcraft_Trials> fabio:hasPageCount "76" ;
     fabio:hasPlaceOfPublication <place/salem> ;
     crm:P102_has_title "A Short History of the Salem Village Witchcraft Trials: : illustrated by a verbatim report of the trial of Mrs. Elizabeth Howe, a memorial of her" ;
     crm:P2_has_type wd:Q571 ;
@@ -82,7 +82,8 @@
         wd:Q3568979,
         wd:Q380719 .
 
-<Look_45_dress> crm:P102_has_title "Look 45, dress" ;
+
+<item/Look_45_dress> crm:P102_has_title "Look 45, dress" ;
     crm:P15_was_influenced_by <person/elizabeth_howe> ;
     crm:P2_has_type schema:CreativeWork ;
     crm:P45_consists_of wd:Q11474,
@@ -101,20 +102,20 @@
     schema:locationCreated wd:Q38 .
 
 
-<Playbill:_The_Crucible> crm:P102_has_title wd:Q1183443 ;
+<item/Playbill:_The_Crucible> crm:P102_has_title "The Crucible" ;
     crm:P2_has_type wd:Q429785 ;
     crm:P45_consists_of wd:Q11472,
         wd:Q127418 ;
     crm:P50_has_current_keeper wd:Q110453413 ;
     schema:about <event/salem_witch_trials>,
-        "Theater" ;
+        wd:Q17172848 ;
     schema:author wd:Q80596 ;
     schema:dateCreated "1953" ;
     schema:hasMeasurement "9 in x 6 5/8 in" ;
     schema:locationCreated wd:Q1384 .
 
 
-<The_Witch_House> dcterms:coverage <place/salem> ;
+<item/The_Witch_House> dcterms:coverage <place/salem> ;
     dcterms:format wd:Q2195 ;
     dcterms:has_format wd:Q192425 ;
     crm:P102_has_title "The Witch House" ;
@@ -127,11 +128,12 @@
     schema:isPartOf "Salem Postcards" .
 
 
-<Execution_of_Bridget_Bishop> dcterms:format wd:Q166816 ;
+<item/Execution_of_Bridget_Bishop> dcterms:format wd:Q166816 ;
     crm:P102_has_title "Execution of Bridget Bishop at Salem, 1692" ;
     crm:P2_has_type wd:Q125191 ;
     crm:P43_has_dimension "8.3 × 10.2 cm" ;
     crm:P50_has_current_keeper wd:Q1507284 ;
+    crm:P62_depicts <event/execution_of_bridget> ;
     schema:about <event/salem_witch_trials>,
         <person/bridget_bishop> ;
     schema:author wd:Q52150099 ;
@@ -139,8 +141,8 @@
     schema:isPartOf "American History: 1607-92" .
 
 
-<Salem_TV_Series> dcterms:source wd:Q37312 ;
-    crm:P102_has_title <place/salem> ;
+<item/Salem_TV_Series> dcterms:source wd:Q37312 ;
+    crm:P102_has_title "Salem" ;
     crm:P2_has_type wd:Q5398426 ;
     crm:P72_has_language wd:Q1860 ;
     schema:about <event/salem_witch_trials> ;
@@ -155,7 +157,7 @@
     schema:startDate "2014-04-20" .
 
 
-<The_Wonders_of_the_Invisible_World> dcterms:publisher "Benjamin Harris for Samuel Phillips" ;
+<item/The_Wonders_of_the_Invisible_World> dcterms:publisher "Benjamin Harris for Samuel Phillips" ;
     dcterms:source wd:Q131454 ;
     fabio:hasPlaceOfPublication wd:Q100 ;
     crm:P102_has_title "The Wonders of the Invisible World" ;
@@ -170,7 +172,7 @@
     schema:relatedTo wd:Q3568979 .
 
 
-<Map_of_Salem_Village> dcterms:format wd:Q129613939 ;
+<item/Map_of_Salem_Village> dcterms:format wd:Q129613939 ;
     crm:P102_has_title "Map of Salem Village 1692" ;
     crm:P2_has_type wd:Q4006 ;
     crm:P43_has_dimension "11 x 17 cm" ;
@@ -182,14 +184,15 @@
     schema:isPartOf wd:Q7051939 .
 
 
-<Court_Warrant_Document> dcterms:source wd:Q7185913 ;
+<item/Court_Warrant_Document> dcterms:source wd:Q7185913 ;
     crm:P102_has_title "Warrant for the execution of Bridget Bishop, and officer's return" ;
     crm:P2_has_type wd:Q2334719 ;
     crm:P43_has_dimension "21.1 x 34.6 cm" ;
     crm:P50_has_current_keeper wd:Q2002625 ;
-    crm:P62i_is_depicted_by "Execution of Bridget Bishop" ;
+    crm:P62i_is_depicted_by <item/Execution_of_Bridget_Bishop> ;
     crm:P72_has_language wd:Q1860 ;
     schema:about <concept/witchcraft>,
+        <event/execution_of_bridget>,
         <event/salem_witch_trials>,
         <person/bridget_bishop> ;
     schema:contributor wd:Q3568979 ;

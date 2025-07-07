@@ -33,7 +33,6 @@ with open("mapping.csv", encoding="utf-8") as f:
         property = row["ontology_property"]
         predicate_map[nl_predicate.strip()] = URIRef(namespaces[prefix.strip()][property.strip()]) # strip() whitespace
 
-# pprint.pprint(predicate_map)
 
 # Entities mapping 
 mapping_entities = {}
@@ -46,6 +45,8 @@ with open("mapping_entities.csv", encoding="utf-8") as f:
 # List for our items
 csv_items = []
 csv_items_prefix = "item/"
+
+always_literal = ["has title"]
 
 # Read CSVs in folder
 folder = "csv_files"
@@ -60,13 +61,14 @@ for file in os.listdir(folder):
         with open(path, newline='', encoding="utf-8") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                subj = URIRef(BASE[row["subject"].strip().replace(" ", "_")])
+                subj_str = row["subject"].strip().replace(" ", "_")
+                subj = URIRef(BASE + csv_items_prefix + subj_str)
                 pred = row["predicate"].strip()
                 obj = row["object"].strip()
 
-                csv_items.append([row["subject"].strip().replace(" ", "_")])
-                # csv_items.append(obj)
-                print(csv_items)
+                # Track subjects to recognize them later
+                item = row["subject"]
+                csv_items.append(item)
 
                 # Replace natural language predicate with property
                 if pred in predicate_map:
@@ -76,33 +78,38 @@ for file in os.listdir(folder):
                     predicate = RDFS.comment
 
                 # Check if object is entity or literal
-                if obj in csv_items:
-                    # create URIRef from base for it
-                    object = URIRef(BASE + csv_items_prefix + obj)
-                elif obj in mapping_entities:
-                    entity = mapping_entities[obj]
-                    if ":" not in entity:
-                        # Simply use the base URI to create the object
-                        obj = URIRef(BASE[entity])
-                    else:
-                        # Else split namespace and entity
-                        namespace_str, entity_str = entity.split(":")
-                        namespace = namespaces[namespace_str]
-                        # Create object URI
-                        obj = URIRef(namespace + entity_str)
+                # Just for titles
+                if pred in always_literal:
+                    object = Literal(obj)
                 else:
-                    # Otherwise create a Literal object
-                    obj = Literal(obj)
+                # If it's an item from our ontology
+                    if obj in csv_items:
+                        # create URIRef from base for it
+                        object = URIRef(BASE + csv_items_prefix + obj.replace(" ", "_"))
+                    elif obj in mapping_entities:
+                        entity = mapping_entities[obj]
+                        if ":" not in entity:
+                            # Simply use the base URI to create the object
+                            object = URIRef(BASE[entity])
+                        else:
+                            # Else split namespace and entity
+                            namespace_str, entity_str = entity.split(":")
+                            namespace = namespaces[namespace_str]
+                            # Create object URI
+                            object = URIRef(namespace + entity_str)
+                    else:
+                        # Otherwise create a Literal object
+                        object = Literal(obj)
 
                 # Add triple to the graph
-                g.add((subj, predicate, obj))
+                g.add((subj, predicate, object))
 
                 # for s,p,o in g.triples((None, None, None)):
                 #     print(s,p,o)
 
-                # Serialize the graph to Turtle format
-                ttl_filename = os.path.splitext(file)[0] + ".ttl"
-                g.serialize(destination=os.path.join("items_ttls", ttl_filename), format="ttl", base=BASE) 
+    # Serialize the graph to Turtle format
+    ttl_filename = os.path.splitext(file)[0] + ".ttl"
+    g.serialize(destination=os.path.join("items_ttls", ttl_filename), format="ttl", base=BASE) 
 
 
 

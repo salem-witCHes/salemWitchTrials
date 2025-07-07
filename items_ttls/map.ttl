@@ -4,7 +4,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<Map_of_Salem_Village> dcterms:format wd:Q129613939 ;
+<item/Map_of_Salem_Village> dcterms:format wd:Q129613939 ;
     crm:P102_has_title "Map of Salem Village 1692" ;
     crm:P2_has_type wd:Q4006 ;
     crm:P43_has_dimension "11 x 17 cm" ;

@@ -3,7 +3,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<Playbill:_The_Crucible> crm:P102_has_title wd:Q1183443 ;
+<item/Playbill:_The_Crucible> crm:P102_has_title "The Crucible" ;
     crm:P2_has_type wd:Q429785 ;
     crm:P45_consists_of wd:Q11472,
         wd:Q127418 ;

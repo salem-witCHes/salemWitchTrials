@@ -5,7 +5,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<The_Wonders_of_the_Invisible_World> dcterms:publisher "Benjamin Harris for Samuel Phillips" ;
+<item/The_Wonders_of_the_Invisible_World> dcterms:publisher "Benjamin Harris for Samuel Phillips" ;
     dcterms:source wd:Q131454 ;
     fabio:hasPlaceOfPublication wd:Q100 ;
     crm:P102_has_title "The Wonders of the Invisible World" ;

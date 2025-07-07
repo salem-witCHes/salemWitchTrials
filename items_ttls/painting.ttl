@@ -3,7 +3,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<Examination_of_a_Witch_painting> crm:P102_has_title "Examination of a Witch" ;
+<item/Examination_of_a_Witch_painting> crm:P102_has_title "Examination of a Witch" ;
     crm:P2_has_type wd:Q3305213 ;
     crm:P32_used_general_technique wd:Q115654970 ;
     crm:P50_has_current_keeper wd:Q3373790 ;
