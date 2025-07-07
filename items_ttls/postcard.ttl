@@ -5,7 +5,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<The_Witch_House> dcterms:coverage <place/salem> ;
+<item/The_Witch_House> dcterms:coverage <place/salem> ;
     dcterms:format wd:Q2195 ;
     dcterms:has_format wd:Q192425 ;
     crm:P102_has_title "The Witch House" ;

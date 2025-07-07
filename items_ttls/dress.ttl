@@ -4,7 +4,7 @@
 @prefix viaf: <http://viaf.org/viaf/> .
 @prefix wd: <https://www.wikidata.org/wiki/> .
 
-<Look_45_dress> crm:P102_has_title "Look 45, dress" ;
+<item/Look_45_dress> crm:P102_has_title "Look 45, dress" ;
     crm:P15_was_influenced_by <person/elizabeth_howe> ;
     crm:P2_has_type schema:CreativeWork ;
     crm:P45_consists_of wd:Q11474,
