@@ -634,6 +634,7 @@ section,
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   unicode-bidi: isolate;
+  text-align: left;
 }
 
 /*--------------------------------------------------------------
