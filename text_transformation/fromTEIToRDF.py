@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as ET
-import rdflib
 from rdflib.namespace import FOAF, RDF, RDFS, XSD, DC, OWL
 from rdflib import URIRef, Literal, Namespace, Graph
 
@@ -167,4 +166,3 @@ if main_event is not None:
         my_graph.add((trial_eh, lode.atTime, Literal(sub_time)))
 
 my_graph.serialize(destination="salem_witch_trials.ttl", format="turtle")
-# print(my_graph.serialize(format="turtle"))
