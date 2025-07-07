@@ -156,6 +156,7 @@ if main_event is not None:
     if sub_event is not None:
         trial_eh = my_ns["event/trial_of_EH"]
         my_graph.add((trial_eh, RDF.type, lode.Event))
+        my_graph.add((trials_uri, schema.subEvent, trial_eh))
 
         sub_name = sub_event.find("tei:eventName", ns)
         sub_agent = sub_event.find("tei:person/tei:persName", ns)
