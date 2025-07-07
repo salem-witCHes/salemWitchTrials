@@ -26,6 +26,8 @@ has number of pages,fabio,hasPageCount
 has number of seasons,schema,numberOfSeasons
 has dimension,crm,P43_has_dimension
 has measurement,schema,hasMeasurement
+has back measurement,schema,hasMeasurement
+has waist measurement,schema,hasMeasurement
 has height,schema,height
 has width,schema,width
 has genre,schema,genre

@@ -1,0 +1,21 @@
+@base <https://w3id.org/salemWitchTrials/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix schema: <https://schema.org/> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+
+<The_Wonders_of_the_Invisible_World> dcterms:publisher "Benjamin Harris for Samuel Phillips" ;
+    dcterms:source wd:Q131454 ;
+    fabio:hasPlaceOfPublication wd:Q100 ;
+    crm:P102_has_title "The Wonders of the Invisible World" ;
+    crm:P2_has_type wd:Q571 ;
+    crm:P72_has_language wd:Q1860 ;
+    schema:about <concept/witchcraft>,
+        <event/salem_witch_trials> ;
+    schema:author wd:Q380719 ;
+    schema:bookFormat wd:Q11060274 ;
+    schema:datePublished "1693" ;
+    schema:isPartOf "John Davis Batchelder Collection (Rare Book Collection)" ;
+    schema:relatedTo wd:Q3568979 .
+

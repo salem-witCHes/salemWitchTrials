@@ -1,0 +1,23 @@
+@base <https://w3id.org/salemWitchTrials/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix schema: <https://schema.org/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+
+<A_Short_History_of_the_Salem_Witchcraft_Trials> fabio:hasPageCount "76" ;
+    fabio:hasPlaceOfPublication <place/salem> ;
+    crm:P102_has_title "A Short History of the Salem Village Witchcraft Trials: : illustrated by a verbatim report of the trial of Mrs. Elizabeth Howe, a memorial of her" ;
+    crm:P2_has_type wd:Q571 ;
+    crm:P50_has_current_keeper wd:Q7603401 ;
+    crm:P72_has_language wd:Q1860 ;
+    schema:about <concept/witchcraft>,
+        <event/salem_witch_trials> ;
+    schema:author viaf:94991968 ;
+    schema:bookFormat wd:Q11060274 ;
+    schema:datePublished "1911" ;
+    schema:mentions <person/bridget_bishop>,
+        <person/elizabeth_howe>,
+        wd:Q3568979,
+        wd:Q380719 .
+

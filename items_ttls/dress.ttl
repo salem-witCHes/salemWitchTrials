@@ -1,0 +1,24 @@
+@base <https://w3id.org/salemWitchTrials/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix schema: <https://schema.org/> .
+@prefix viaf: <http://viaf.org/viaf/> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+
+<Look_45_dress> crm:P102_has_title "Look 45, dress" ;
+    crm:P15_was_influenced_by <person/elizabeth_howe> ;
+    crm:P2_has_type schema:CreativeWork ;
+    crm:P45_consists_of wd:Q11474,
+        wd:Q182045,
+        wd:Q37681,
+        wd:Q910194 ;
+    crm:P50_has_current_keeper wd:Q1464509 ;
+    crm:P55_has_current_location wd:Q3141 ;
+    schema:about <event/salem_witch_trials> ;
+    schema:acquiredFrom viaf:25157279880703301940 ;
+    schema:creator wd:Q207939 ;
+    schema:dateCreated "2007" ;
+    schema:hasMeasurement "208 cm",
+        "34 cm" ;
+    schema:isPartOf wd:Q133456206 ;
+    schema:locationCreated wd:Q38 .
+

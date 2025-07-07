@@ -1,0 +1,21 @@
+@base <https://w3id.org/salemWitchTrials/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+
+<Salem_TV_Series> dcterms:source wd:Q37312 ;
+    crm:P102_has_title <place/salem> ;
+    crm:P2_has_type wd:Q5398426 ;
+    crm:P72_has_language wd:Q1860 ;
+    schema:about <event/salem_witch_trials> ;
+    schema:actor wd:Q958227 ;
+    schema:author wd:Q4679789,
+        wd:Q540510 ;
+    schema:contentLocation <place/salem> ;
+    schema:genre wd:Q200092 ;
+    schema:locationCreated wd:Q1588 ;
+    schema:numberOfSeasons "3" ;
+    schema:productionCompany wd:Q8962119 ;
+    schema:startDate "2014-04-20" .
+
